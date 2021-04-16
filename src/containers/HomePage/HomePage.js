@@ -4,7 +4,7 @@ function HomePage() {
     return (
         <div>
             Homeppage
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     )
 }
