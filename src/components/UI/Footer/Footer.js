@@ -1,12 +1,11 @@
 import React from 'react';
 import './Footer.scss';
-// import './Footer-Dark.css'
 
 const footer = () => (
   <div>
     <footer className="footer">
       <div className="support-section">
-        <div class="container">
+        <div className="container">
           <div className="support-wrapper">
             <div className="buy-from-us">
               <h3>Buy from Us</h3>
@@ -46,8 +45,8 @@ const footer = () => (
             </div>
           </div>
         </div>
-        <div class="col item social"><a href="/"><i class="icon ion-social-facebook"></i></a><a href="/"><i class="icon ion-social-twitter"></i></a><a href="/"><i class="icon ion-social-snapchat"></i></a><a href="/"><i class="icon ion-social-instagram"></i></a></div>
-        <p class="copyright">Company Name © 2021</p>
+        <div className="col item social"><a href="/"><i className="icon ion-social-facebook"></i></a><a href="/"><i className="icon ion-social-twitter"></i></a><a href="/"><i className="icon ion-social-snapchat"></i></a><a href="/"><i className="icon ion-social-instagram"></i></a></div>
+        <p className="copyright">Company Name © 2021</p>
       </div>
     </footer>
   </div>

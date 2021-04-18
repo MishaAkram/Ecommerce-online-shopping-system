@@ -1,9 +1,11 @@
 import React from 'react'
+import Toolbar from '../../components/Navigation/Toolbar';
 import Footer from '../../components/UI/Footer/Footer'
 function HomePage() {
     return (
         <div>
-            Homeppage
+            <Toolbar/>
+              Homepage
             <Footer/>
         </div>
     )
