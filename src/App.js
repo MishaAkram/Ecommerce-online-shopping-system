@@ -1,11 +1,18 @@
 import HomePage from "./containers/HomePage/HomePage";
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import React, { Fragment } from 'react';
 
-import  React  from 'react';
 function App() {
   return (
-    
-      <HomePage />
-    
+    <div>
+      <Fragment>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Redirect to="/" />
+        </Switch>
+      </Fragment>
+    </div>
+
   );
 }
 
