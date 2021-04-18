@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // import { toggleSideDrawer } from '../../store/actions';
 import './Navigation.scss';
-import './Navigation-Clean.css'
 
 import NavigationItems from './NavigationItems/NavigationItems';
 import NavigationItemsIcons from './NavigationItems/NavigationItemsIcons';
@@ -19,7 +18,7 @@ const toolbar = ({ toggleSideDrawer }) => (
       </button>
       <img className="logo" src={logo} alt="Elegant Store" />
       <nav className="navigation">
-          {/* <NavigationItems /> */}
+          <NavigationItems />
       </nav>
     </div>
     <nav className="navigation-icons">
