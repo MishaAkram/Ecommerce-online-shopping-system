@@ -5,29 +5,23 @@ import { connect } from 'react-redux';
 
 import NavigationItem from './NavigationItem';
 
+const style={
+  fontWeight: "550",
+    fontSize: "1em",
+    marginBottom: ".3em"
+}
 const navigationItems = ({ filterProducts, isAuth }) => (
   <ul className="nav-list">
     <NavigationItem
+    style={style}
       // clicked={() => filterProducts('female')}
-      // link="/productlist/female"
-      link="/"
-      exact
-      >Women</NavigationItem>
-    <NavigationItem
-      // clicked={() => filterProducts('male')}
-      // link="/productlist/male"
-      link="/"
-       exact
-      >Men</NavigationItem>
-    <NavigationItem 
-    link="/" exact
-    // link="/contact" exact
-    >Contact</NavigationItem>
-    <NavigationItem 
-    // link="/" exact
-    link="/" exact
-    >Home</NavigationItem>
-    {/* {isAuth ? <NavigationItem link="/orders" exact>Orders</NavigationItem> : null} */}
+      link="/productlist/female" exact>Women</NavigationItem>
+    <NavigationItem // clicked={() => filterProducts('male')}
+      link="/productlist/male"exact
+      style={style}>Accessories</NavigationItem>
+    <NavigationItem style={style} link="/contact" exact >Contact</NavigationItem>
+    <NavigationItem style={style} link="/" exact>Home</NavigationItem>
+    {isAuth ? <NavigationItem style={style} link="/orders" exact>Orders</NavigationItem> : null}
   </ul>
 );
 

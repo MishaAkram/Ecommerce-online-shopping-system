@@ -5,26 +5,7 @@
   margin-top: 2em;
   
 
-  .questions {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-
-    &-wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-
-      @include mediaMd {
-        display: flex;
-      }
-    }
-  }
-
-  .questions-text {
-    margin: auto;
-    max-width: 400px;
-  }
+  
 }
 
 .title {

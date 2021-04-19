@@ -1,15 +1,15 @@
 @import '../../index.scss';
 
 .header {
-  // position: fixed;
-  // z-index: 10;
+  position: fixed;
+  z-index: 10;
   // background-color: #000;
-  // width: 100%;
-  // height: 42px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  // padding: 5px 15px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
   background-color: #282d32;
   
   // background: rgb(175, 44, 44);
@@ -84,8 +84,9 @@
 
 .navigation-icons {
   &-list {
-    display: flex;
+    display:flex;
     position: relative;
+    float: right;
 
     .nav-link {
       color: #fff;

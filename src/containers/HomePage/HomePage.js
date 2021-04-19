@@ -5,7 +5,27 @@ function HomePage() {
     return (
         <div>
             <Toolbar/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
               Homepage
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
             <Footer/>
         </div>
     )
