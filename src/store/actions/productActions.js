@@ -22,32 +22,31 @@ export const addToWishlist = id => {
   }
 };
 
-export const sortProducts = (priceKey, idKey) => {
-  return {
+export const sortProducts = (priceKey, idKey) => dispatch=> {
+  dispatch({
     type: actionTypes.SORT_PRODUCTS,
     priceKey,
     idKey
-  }
+  })  
 };
 
-export const handleDirection = () => {
-  return {
+export const handleDirection = () => dispatch => {
+  dispatch({
     type: actionTypes.HANDLE_DIRECTION
-  }
+  })
 };
 
-export const handleCheckboxValue = value => {
-  return {
+export const handleCheckboxValue = value => dispatch=>{
+  dispatch({
     type: actionTypes.HANDLE_CHECKBOX_VALUE,
     value
-  }
+  })
 }
 
-export const showDetails = id => {
-  return {
-    type: actionTypes.SHOW_DETAILS,
-    id
-  }
+export const showDetails = (id) =>dispatch => {  
+    dispatch({type: actionTypes.SHOW_DETAILS,
+    id})
+  
 };
 
 export const calculateOrder = () => {
