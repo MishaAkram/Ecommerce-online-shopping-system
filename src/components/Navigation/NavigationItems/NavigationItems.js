@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import { filterProducts } from '../../../store/actions';
+import { filterProducts } from '../../../store/actions';
 
 import NavigationItem from './NavigationItem';
 
@@ -14,9 +14,10 @@ const navigationItems = ({ filterProducts, isAuth }) => (
   <ul className="nav-list">
     <NavigationItem
     style={style}
-      // clicked={() => filterProducts('female')}
+      clicked={() => filterProducts('female')}
       link="/productlist/female" exact>Women</NavigationItem>
-    <NavigationItem // clicked={() => filterProducts('male')}
+    <NavigationItem 
+    clicked={() => filterProducts('male')}
       link="/productlist/male"exact
       style={style}>Accessories</NavigationItem>
     <NavigationItem style={style} link="/contact" exact >Contact</NavigationItem>
@@ -32,5 +33,4 @@ NavigationItem.propTypes = {
 
 const mapStateToProps = ({ auth }) => ({ isAuth: auth.token !== null });
 
-export default navigationItems 
-// connect(mapStateToProps, { filterProducts })(navigationItems);
+export default connect(mapStateToProps, { filterProducts })(navigationItems);

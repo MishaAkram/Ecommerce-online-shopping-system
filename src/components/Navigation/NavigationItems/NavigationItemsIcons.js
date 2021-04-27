@@ -10,7 +10,7 @@ import logoutIcon from '../../../assets/icons/logout.png';
 
 const navigationItemsIcons = ({ cartItems, isAuth }) => (
   <ul className="navigation-icons-list ">
-    {/* <p className="products-amount">{cartItems.length}</p> */}
+    <p className="products-amount">{cartItems.length}</p>
     {!isAuth
       ? <NavigationItem link="/auth" exact>
         <img className="icon" src={userIcon} alt="sign in or sign up" />
@@ -38,5 +38,4 @@ const mapStateToProps = ({ products, auth }) => ({
   isAuth: auth.token !== null
 });
 
-export default navigationItemsIcons
-// connect(mapStateToProps)(navigationItemsIcons);
+export default connect(mapStateToProps)(navigationItemsIcons);
