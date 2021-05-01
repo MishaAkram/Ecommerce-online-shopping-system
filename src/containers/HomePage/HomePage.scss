@@ -1,24 +1,11 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .home-container {
   width: 100%;
   max-width: 1200px;
 
   .showcase {
-    padding: 0 .5em;
-
-    .main-title {
-      text-align: center;
-    }
-
-    .main-info {
-      text-align: center;
-      display: none;
-
-      @include mediaMd {
-        display: block;
-      }
-    }
+    padding: 0 0.5em;
   }
 
   .sale {
@@ -31,25 +18,6 @@
 
     @include mediaMd {
       height: calc(400px + 16vw);
-    }
-
-    .title {
-      font-size: 2.6em;
-      text-transform: uppercase;
-      font-weight: $fw-bold;
-      margin-top: 1.6em;
-
-      @include mediaMd {
-        font-size: 3.6em;
-      }
-    }
-
-    .subtitle {
-      max-width: 370px;
-
-      @include mediaMd {
-        max-width: 450px;
-      }
     }
   }
 }
@@ -104,30 +72,13 @@ $totalAnimationTime: 20s;
   .slide:nth-child(5) {
     animation-delay: 0s;
   }
-
-  .title {
-    font-size: 1.6em;
-    text-transform: uppercase;
-    font-weight: $fw-bold;
-    margin-top: 5em;
-  
-    @include mediaMd {
-      font-size: 3.6em;
-      margin-top: 5em;
-    }
-  }
-  
-  .subtitle {
-    font-size: 1em;
-    max-width: 260px;
-  }
 }
 
-@keyframes anime {   
-  25%{
-    opacity:1;
+@keyframes anime {
+  25% {
+    opacity: 1;
   }
-  40%{
-    opacity:0;
+  40% {
+    opacity: 0;
   }
-} 
+}
