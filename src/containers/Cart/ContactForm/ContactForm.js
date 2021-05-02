@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import './ContactForm.scss';
 import axios from '../../../axios';
-import { connect, useSelector,useDispatch } from 'react-redux';
+import {useSelector,useDispatch } from 'react-redux';
 import ErrorHandler from '../../../hoc/ErrorHandler';
-import * as actions from '../../../store/actions';
 import { checkValidity } from '../../../shared/Validity';
 import PropTypes from 'prop-types';
-
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Input/Input';
+import { purchaseOrder } from './../../../store/actions/orderActions';
 
 function ContactForm() {
   const cartItems = useSelector(state => state.products.cart)
@@ -55,7 +54,7 @@ function ContactForm() {
       formData[formElementIndentifier] = orderForm[formElementIndentifier].value
     }
     const order = { products: cartItems, price: price, orderData: formData, userId: userId };
-    dispatch(order, token);
+    dispatch(purchaseOrder(order, token));
   };
 
   const inputChangedHandler = (e, inputIndentifier) => {// ====== Immutably changind input values ======
@@ -100,7 +99,7 @@ function ContactForm() {
       ))}
       <Button
         btnType="dark"
-        clicked={orderHandler}
+        clicked={orderHandler()}
         disabled={!formIsValid}>Order</Button>
     </form>
   );
@@ -118,10 +117,4 @@ ContactForm.propTypes = {
   userId: PropTypes.string,
   purchaseOrder: PropTypes.func.isRequired
 };
-const mapDispatchToProps = dispatch => {
-  return {
-    purchaseOrder: (orderData, token) => dispatch(actions.purchaseOrder(orderData, token))
-  };
-};
-
-export default connect(null,mapDispatchToProps)(ErrorHandler(ContactForm, axios));
+export default (ErrorHandler(ContactForm, axios));

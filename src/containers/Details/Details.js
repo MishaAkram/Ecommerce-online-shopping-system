@@ -15,11 +15,7 @@ function Details() {
   const dispatch = useDispatch();
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const detailProduct = useSelector(state => state.products.detailProduct)
-  const handleChange = (e) => {
-    setValue(e.target.value)
-    console.log("value",value)
-  };
-
+  
   const handleAddToCart = () => {
     (value === '') ?
       dispatch(openModal()) :
