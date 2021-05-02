@@ -1,36 +1,42 @@
 import React, { Fragment } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import * as actions from './store/actions';
 // import asyncComponent from './hoc/asyncComponent';
 import HomePage from './containers/HomePage/HomePage';
 import ProductList from './containers/ProductList/ProductList';
 import Layout from './layout/Layout';
+import Cart from './containers/Cart/Cart';
+import Details from './containers/Details/Details';
+
 
 
 function App() {
+  const isAuth = useSelector(state => state.auth.token !== null)
   return (
     <div>
       <Fragment>
-      <Layout>
+        <Layout>
 
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/productlist/:type" component={ProductList} />
-          <Redirect to="/" />
-        </Switch>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/productlist/:type" component={ProductList} />
+            <Route path="/details/:id" component={Details} />
+            <Route path="/cart" component={Cart} />
+
+            <Redirect to="/" />
+          </Switch>
         </Layout>
       </Fragment>
     </div>
 
   );
 }
-
-const mapStateToProps = state => {
-  return {
-    isAuth: state.auth.token !== null
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     isAuth: state.auth.token !== null
+//   };
+// };
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -38,5 +44,5 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(connect(null, mapDispatchToProps)(App));
 // export default App;
