@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import './DetailItem.scss';
-import { connect } from 'react-redux';
+import {useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class DetailItem extends Component {
-  render() {
-    if (this.props.detailProduct === null) return <Redirect to="/" />;
-
-    const { title, subtitle, img, description, price } = this.props.detailProduct;
-
+function DetailItem({children}){
+  const detailProduct=useSelector(state => state.products.detailProduct)
+     if (detailProduct === null) return <Redirect to="/" />;
+    const { title, subtitle, img, description, price } = detailProduct;
     return (
       <li className="detail-item">
         <h3 className="detail-title">{title}</h3>
@@ -22,22 +20,15 @@ class DetailItem extends Component {
             <h3 className="detail-subtitle">Description:</h3>
             <p className="detail-value">{description}</p>
             <h3 className="detail-subtitle">Price: {price}.00 $</h3>
-            {this.props.children}
+            {children}
           </div>
         </div>
       </li>
     )
-  }
-};
+    };
 
 DetailItem.propTypes = {
   detailProduct: PropTypes.object
 };
 
-const mapStateToProps = state => {
-  return {
-    detailProduct: state.products.detailProduct
-  };
-};
-
-export default connect(mapStateToProps)(DetailItem);
+export default DetailItem;
