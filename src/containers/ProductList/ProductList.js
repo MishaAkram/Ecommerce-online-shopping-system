@@ -7,17 +7,10 @@ import SideNavigation from '../../components/Navigation/NavigationItems/SideNavi
 import Product from './Product/Product';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
-// import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
-import {
-  SHOW_DETAILS,
-  OPEN_MODAL,
-  CLOSE_MODAL,
-  HANDLE_DIRECTION,
-  HANDLE_CHECKBOX_VALUE,
-  SORT_PRODUCTS
-} from './../../store/actions/actionTypes';
+import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
+import { closeModal,handleCheckboxValue,handleDirection,sortProducts ,openModal,showDetails} from '../../store/actions';
 
-function ProductList(props) {
+function ProductList() {
   // const [checkboxvalue, setChechboxValue] = useState("relevance")
   const products = useSelector(state => state.products.products)
   const modalShowed = useSelector(state => state.interface.modalShowed)
@@ -25,15 +18,15 @@ function ProductList(props) {
   const checkboxValue = useSelector(state => state.products.sortCheckboxValue)
   const dispatch = useDispatch();
 
-  const handleChange = () => {
-    dispatch({ type: HANDLE_CHECKBOX_VALUE })
-    dispatch({ type: HANDLE_DIRECTION })
-    dispatch({ type: SORT_PRODUCTS })
+  const handleChange = (e) => {
+    dispatch(handleCheckboxValue(e.target.value))
+    dispatch(handleDirection())
+    dispatch(sortProducts('price', 'id'))
   };
 
   const showDetailsByModal =()=> {
-    dispatch({ type: SHOW_DETAILS })
-    dispatch({ type: CLOSE_MODAL })
+    dispatch(showDetails(id))
+    dispatch(closeModal())
   }
   if (!products || products.length === 0) {
     return <Redirect to="/" />
@@ -43,13 +36,13 @@ function ProductList(props) {
   console.log("products", products)
   return (
     <>
-      {/* <ScrollToTopOnMount /> */}
+      <ScrollToTopOnMount />
       <div className="product-container">
         <Modal
           showModal={modalShowed}
           showBackdrop={modalShowed}
-          closeModal={() => dispatch({ type: CLOSE_MODAL })}>
-          <button onClick={() => dispatch({ type: CLOSE_MODAL })} className="close-modal-btn">x</button>
+          closeModal={() => dispatch(closeModal())}>
+          <button onClick={() => dispatch(closeModal())} className="close-modal-btn">x</button>
           <h3 className="main-title">{title}</h3>
           <img src={img} alt="" />
           <h3 className="modal-title">Info:</h3>
@@ -80,8 +73,8 @@ function ProductList(props) {
               <Product
                 key={product.id}
                 product={product}
-                showModal={() => dispatch({ type: OPEN_MODAL })}
-                showDetails={() => dispatch({ type: SHOW_DETAILS })}
+                showModal={() => dispatch(openModal())}
+                showDetails={() => dispatch(showDetails())}
               />
             ))}
           </ul>
@@ -104,9 +97,4 @@ ProductList.propTypes = {
   handleCheckboxValue: PropTypes.func.isRequired,
   showDetails: PropTypes.func.isRequired,
 };
-
-
-
-
-
 export default ProductList;

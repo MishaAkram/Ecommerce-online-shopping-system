@@ -22,12 +22,12 @@ export const addToWishlist = id => {
   }
 };
 
-export const sortProducts = (priceKey, idKey) => dispatch=> {
+export const sortProducts = (priceKey, idKey) => dispatch => {
   dispatch({
     type: actionTypes.SORT_PRODUCTS,
     priceKey,
     idKey
-  })  
+  })
 };
 
 export const handleDirection = () => dispatch => {
@@ -36,44 +36,44 @@ export const handleDirection = () => dispatch => {
   })
 };
 
-export const handleCheckboxValue = value => dispatch=>{
+export const handleCheckboxValue = value => dispatch => {
   dispatch({
     type: actionTypes.HANDLE_CHECKBOX_VALUE,
     value
   })
 }
 
-export const showDetails = (id) =>dispatch => {  
-    dispatch({type: actionTypes.SHOW_DETAILS,
-    id})
-  
+export const showDetails = (id) => dispatch => {
+  dispatch({
+    type: actionTypes.SHOW_DETAILS,
+    id
+  })
+
 };
 
-export const calculateOrder = () => {
-  return {
-    type: actionTypes.CALCULATE_ORDER
-  }
+export const calculateOrder = () => dispatch => {
+  dispatch({ type: actionTypes.CALCULATE_ORDER })
 };
 
-export const removeCartItem = id => {
-  return {
+export const removeCartItem = id => dispatch=> {
+  dispatch({
     type: actionTypes.REMOVE_CART_ITEM,
     id
-  }
+  })
 };
 
-export const handleProductAmount = (id, value) => {
-  return {
+export const handleProductAmount = (id, value) => dispatch => {
+  dispatch({
     type: actionTypes.HANDLE_PRODUCT_AMOUNT,
     id,
     value
-  }
+  })
 };
 
-export const clearCart = () => {
-  return {
-    type: actionTypes.CLEAR_CART
-  }
+export const clearCart = () => dispatch => {
+  dispatch({
+   type: actionTypes.CLEAR_CART
+  })
 };
 
 export const removeWishlistItem = id => {
