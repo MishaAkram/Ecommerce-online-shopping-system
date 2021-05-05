@@ -86,7 +86,7 @@ function Details() {
           </div>
           <div className="button-wrapper">
             <Button
-              clicked={()=>handleAddToCart()}
+              clicked={()=>handleAddToCart}
               disabled={detailProduct.inCart ? true : false}>
               {detailProduct.inCart ?
                 (<p>In Cart</p>) :
