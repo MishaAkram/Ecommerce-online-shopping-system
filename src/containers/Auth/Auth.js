@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Auth.scss';
-import * as actions from '../../store/actions';
-import { connect } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { checkValidity } from '../../shared/Validity';
 import PropTypes from 'prop-types';
@@ -10,11 +9,14 @@ import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
-
-class Auth extends Component {
-  state = {
-    controls: {
-      email: {
+import {auth} from './../../store/actions/authActions'
+function  Auth(){
+  const loading=useSelector(state => state.auth.loading )
+  const error  =useSelector(state => state.auth.error)
+  const isAuth =useSelector(state => state.auth.token !== null)
+  const dispatch =useDispatch();
+  const [controls,setControls] = useState({
+          email: {
         elementType: 'input',
         elementConfig: {
           type: 'email',
@@ -41,47 +43,36 @@ class Auth extends Component {
         },
         valid: false,
         touched: false
-      },
+      
     },
-    isSignup: true
-  };
+  });
+  const [isSignup,setIsSignUp]=useState(true)
 
-  inputChangedHandler = (e, controlName) => {
+  const inputChangedHandler = (e, controlName) => {
     const updatedControls = {
-      ...this.state.controls,
-
-      // update only one input
-      [controlName]: {
-        ...this.state.controls[controlName],
+      ...controls,
+      [controlName]: { // update only one input
+        ...controls[controlName],
         value: e.target.value,
-        valid: checkValidity(e.target.value, this.state.controls[controlName].validation),
+        valid: checkValidity(e.target.value, controls[controlName].validation),
         touched: true
       }
     };
-
-    this.setState({
-      controls: updatedControls
-    });
+    setControls(updatedControls);
   };
 
-  submitHandler = e => {
+  const submitHandler = e => {
     e.preventDefault();
-
-    this.props.onAuth(this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup);
+    dispatch(auth(controls.email.value, controls.password.value,isSignup));
   };
 
-  switchAuthModeHandler = () => {
-    this.setState(prevState => {
+  const switchAuthModeHandler = () => {
+    setIsSignUp(prevState => {
       return {
         isSignup: !prevState.isSignup
       };
     });
   };
-
-  render() {
-    const { loading, error, isAuth } = this.props;
-    const { controls, isSignup } = this.state;
-
     // convert object of objects into array of objects
     const formElementsArray = [];
     for (let key in controls) {
@@ -100,7 +91,7 @@ class Auth extends Component {
         invalid={!formElement.config.valid}
         shouldValidate={formElement.config.validation}
         touched={formElement.config.touched}
-        changed={(e) => this.inputChangedHandler(e, formElement.id)}
+        changed={(e) => inputChangedHandler(e, formElement.id)}
       />
     ));
 
@@ -133,12 +124,12 @@ class Auth extends Component {
           {title}
           <div className="switch">
             <Button
-              clicked={this.switchAuthModeHandler}
+              clicked={switchAuthModeHandler()}
               btnType="dark">SWITCH TO {isSignup ? 'SINGIN' : 'SIGNUP'}</Button>
           </div>
           {authRedirect}
           {errorMessage}
-          <form onSubmit={this.submitHandler}>
+          <form onSubmit={submitHandler}>
             {form}
             <Button>Submit</Button>
           </form>
@@ -146,7 +137,7 @@ class Auth extends Component {
       </>
     );
   }
-};
+
 
 Auth.propTypes = {
   loading: PropTypes.bool.isRequired,
@@ -155,18 +146,4 @@ Auth.propTypes = {
   onAuth: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => {
-  return {
-    loading: state.auth.loading,
-    error: state.auth.error,
-    isAuth: state.auth.token !== null
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onAuth: (email, password, isSignup) => dispatch(actions.auth(email, password, isSignup))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+export default Auth;
