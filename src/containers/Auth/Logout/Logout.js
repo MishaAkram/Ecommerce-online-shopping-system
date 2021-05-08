@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { logout } from '../../../store/actions';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class Logout extends Component {
-  componentDidMount() {
-    this.props.logout();
-  };
-
-  render() {
-    return <Redirect to="/" />;
-  }
+function Logout() {
+  const dispatch = useDispatch()
+    useEffect(() => {
+      dispatch(logout());
+    })
+  return <Redirect to="/" />;
 };
-
 Logout.propTypes = {
   logout: PropTypes.func.isRequired
 };
 
-export default connect(null, { logout })(Logout);
+export default Logout;

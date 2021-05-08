@@ -1,11 +1,11 @@
 import React from 'react';
 import './Order.scss';
 
-const order = (props) => {
+const order = ({products,price}) => {
   return (
     <li className="order-item">
       <ul className="order-products">
-        {props.products.map(product => (
+        {products.map(product => (
           <li key={product.id}>
             <p className="order-title"><span className="bold">Name: </span>{product.title}</p>
             <p className="order-title"><span className="bold">Size: </span>{product.size}</p>
@@ -14,7 +14,7 @@ const order = (props) => {
           </li>
         ))}
       </ul>
-      <p className="order-price">Total Price: {props.price}.00 $</p>
+      <p className="order-price">Total Price: {price}.00 $</p>
     </li>
   );
 };
