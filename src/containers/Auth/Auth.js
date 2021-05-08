@@ -118,7 +118,7 @@ function Auth() {
         </div>
         {authRedirect}
         {errorMessage}
-        <form onSubmit={() => submitHandler()}>
+        <form onSubmit={(e) => submitHandler(e)}>
           {form}
           <Button>Submit</Button>
         </form>

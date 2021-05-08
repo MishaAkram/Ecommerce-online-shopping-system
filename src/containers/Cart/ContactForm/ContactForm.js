@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ContactForm.scss';
 import axios from '../../../axios';
-import {useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import ErrorHandler from '../../../hoc/ErrorHandler';
 import { checkValidity } from '../../../shared/Validity';
 import PropTypes from 'prop-types';
@@ -82,7 +82,7 @@ function ContactForm() {
   };
 
   let form = (
-    <form className="contact-form" onSubmit={orderHandler}>
+    <form className="contact-form" onSubmit={(e) => orderHandler(e)}>
       <h3 className="title">Enter Your Contact Data</h3>
       <Input elementType="..." elementConfig="..." value="..." />
       {formElementsArray.map(formElement => (
@@ -99,7 +99,7 @@ function ContactForm() {
       ))}
       <Button
         btnType="dark"
-        clicked={orderHandler()}
+        clicked={(e) => orderHandler(e)}
         disabled={!formIsValid}>Order</Button>
     </form>
   );

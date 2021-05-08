@@ -1,11 +1,11 @@
 import React from 'react';
 import './Modal.scss';
 
-// import Backdrop from '../Backdrop/Backdrop';
+import Backdrop from '../Backdrop/Backdrop';
 
 const Modal = ({ showBackdrop, closeModal, modalType, showModal, children }) => (
   <>
-    {/* <Backdrop show={showBackdrop} clicked={closeModal} /> */}
+    <Backdrop show={showBackdrop} clicked={closeModal} />
     <div
       className={["modal", modalType].join(' ')}
       style={{
