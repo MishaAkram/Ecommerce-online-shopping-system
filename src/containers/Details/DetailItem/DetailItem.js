@@ -1,10 +1,10 @@
 import React, { } from 'react';
 import './DetailItem.scss';
-import { useSelector } from 'react-redux';
+import { useSelector, connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function DetailItem({ children }) {
+function DetailItem({ children}) {
   const detailProduct = useSelector(state => state.products.detailProduct)
   if (detailProduct === null) return <Redirect to="/" />;
   const { title, subtitle, img, description, price } = detailProduct;
