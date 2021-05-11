@@ -51,7 +51,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -65,7 +65,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -80,7 +80,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -95,7 +95,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -110,7 +110,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'women-suits',
     gender: 'female'
   },
 
@@ -127,7 +127,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -142,7 +142,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -157,7 +157,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -171,7 +171,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -185,7 +185,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -199,7 +199,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-jackets',
+    category: 'women-suits',
     gender: 'female'
   },
 
@@ -215,7 +215,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -229,7 +229,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -243,7 +243,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -257,7 +257,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -271,7 +271,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -285,7 +285,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-hats',
+    category: 'women-suits',
     gender: 'female'
   },
 
@@ -301,7 +301,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -315,7 +315,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -329,7 +329,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -343,7 +343,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -357,7 +357,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -371,7 +371,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'women-suits',
     gender: 'female'
   },
 
@@ -386,7 +386,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shoes',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -399,7 +399,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shoes',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -412,7 +412,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shoes',
+    category: 'women-suits',
     gender: 'female'
   },
   {
@@ -469,7 +469,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
   {
@@ -483,7 +483,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
   {
@@ -497,7 +497,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
   {
@@ -511,7 +511,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
   {
@@ -525,7 +525,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
   {
@@ -539,7 +539,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-suits',
+    category: 'women-shoes',
     gender: 'female'
   },
 
@@ -555,7 +555,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
   {
@@ -569,7 +569,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
   {
@@ -583,7 +583,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
   {
@@ -597,7 +597,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
   {
@@ -611,7 +611,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
   {
@@ -625,7 +625,7 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-t-shirts',
+    category: 'women-perfumes',
     gender: 'female'
   },
 
