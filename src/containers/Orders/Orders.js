@@ -16,7 +16,7 @@ function Orders() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchOrders(token, userId));
-  });
+  },[dispatch,token,userId]);
   if (loading){
     <Spinner />
   }

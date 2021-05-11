@@ -8,11 +8,11 @@ function Logout() {
   const dispatch = useDispatch()
     useEffect(() => {
       dispatch(logout());
-    })
+    },[dispatch])
   return <Redirect to="/" />;
 };
 Logout.propTypes = {
-  logout: PropTypes.func.isRequired
+  logout: PropTypes.func
 };
 
 export default Logout;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Auth.scss';
-import { connect,useSelector, useDispatch } from 'react-redux';
+import { connect, useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { checkValidity } from '../../shared/Validity';
 import PropTypes from 'prop-types';
-import { onAuth}  from './../../store/actions/authActions'
+import { onAuth } from './../../store/actions/authActions'
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -128,10 +128,10 @@ function Auth() {
 };
 
 Auth.propTypes = {
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool,
   error: PropTypes.object,
-  isAuth: PropTypes.bool.isRequired,
-  onAuth: PropTypes.func.isRequired
+  isAuth: PropTypes.bool,
+  onAuth: PropTypes.func
 };
 
 const mapStateToProps = state => {

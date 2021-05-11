@@ -8,7 +8,7 @@ import Product from './Product/Product';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
-import { closeModal,handleCheckboxValue,handleDirection,sortProducts ,openModal,showDetails} from '../../store/actions';
+import { closeModal, handleCheckboxValue, handleDirection, sortProducts, openModal, showDetails } from '../../store/actions';
 
 function ProductList() {
   // const [checkboxvalue, setChechboxValue] = useState("relevance")
@@ -25,7 +25,7 @@ function ProductList() {
     dispatch(sortProducts('price', 'id'))
   };
 
-  const showDetailsByModal =()=> {
+  const showDetailsByModal = () => {
     dispatch(showDetails(id))
     dispatch(closeModal())
   }
@@ -33,7 +33,6 @@ function ProductList() {
     return <Redirect to="/" />
   };
 
-  console.log("products", products)
   return (
     <>
       <ScrollToTopOnMount />
@@ -57,7 +56,7 @@ function ProductList() {
         </Modal>
         <div className="filter-panel">
           Sort by:
-          <select onChange={()=>handleChange()} value={checkboxValue}>
+          <select onChange={() => handleChange()} value={checkboxValue}>
             <option value="relevance">Relevance</option>
             <option value="price - low to high">Price - low to high</option>
             <option value="price - high to low">Price - high to low</option>
@@ -69,32 +68,31 @@ function ProductList() {
             <SideNavigation />
           </div>
           <ul className="product-list">
-            {products.map(product => (
+            {products.map((product,index) => {
+              return(
               <Product
-                key={product.id}
+                key={index}
                 product={product}
                 showModal={(id) => dispatch(openModal(id))}
                 showDetails={(id) => dispatch(showDetails(id))}
-              />
-            ))}
+              />)
+              })}
           </ul>
         </div>
       </div>
     </>
   );
-
 };
-
 ProductList.propTypes = {
-  products: PropTypes.array.isRequired,
-  modalShowed: PropTypes.bool.isRequired,
+  products: PropTypes.array,
+  modalShowed: PropTypes.bool,
   modalProduct: PropTypes.object,
-  checkboxValue: PropTypes.string.isRequired,
-  openModal: PropTypes.func.isRequired,
-  closeModal: PropTypes.func.isRequired,
-  sortProducts: PropTypes.func.isRequired,
-  handleDirection: PropTypes.func.isRequired,
-  handleCheckboxValue: PropTypes.func.isRequired,
-  showDetails: PropTypes.func.isRequired,
+  checkboxValue: PropTypes.string,
+  openModal: PropTypes.func,
+  closeModal: PropTypes.func,
+  sortProducts: PropTypes.func,
+  handleDirection: PropTypes.func,
+  handleCheckboxValue: PropTypes.func,
+  showDetails: PropTypes.func,
 };
 export default ProductList;

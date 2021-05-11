@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Button from '../../../components/UI/Button/Button';
 
-function OrderSummary({ acceptOrder, isAuth }) {
+function OrderSummary({ acceptOrder, isAuth, cartItems }) {
   const priceTotal = useSelector(state => state.products.priceTotal)
   const delivery = useSelector(state => state.products.delivery)
   const orderTotal = useSelector(state => state.products.orderTotal)
@@ -31,9 +31,9 @@ function OrderSummary({ acceptOrder, isAuth }) {
 }
 
 OrderSummary.propTypes = {
-  priceTotal: PropTypes.number.isRequired,
-  delivery: PropTypes.number.isRequired,
-  orderTotal: PropTypes.number.isRequired
+  priceTotal: PropTypes.number,
+  delivery: PropTypes.number,
+  orderTotal: PropTypes.number
 };
 
 export default OrderSummary;

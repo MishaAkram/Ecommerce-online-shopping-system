@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import './DetailItem.scss';
-import { useSelector, connect } from 'react-redux';
+import { useSelector} from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 

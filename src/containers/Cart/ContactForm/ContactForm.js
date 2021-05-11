@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ContactForm.scss';
 import axios from '../../../axios';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 import ErrorHandler from '../../../hoc/ErrorHandler';
 import { checkValidity } from '../../../shared/Validity';
 import PropTypes from 'prop-types';
@@ -100,7 +100,7 @@ function ContactForm() {
       <Button
         btnType="dark"
         clicked={(e) => orderHandler(e)}
-        disabled={!formIsValid}>Order</Button>
+        disabled={formIsValid}>Order</Button>
     </form>
   );
 
@@ -110,11 +110,12 @@ function ContactForm() {
   return form;
 }
 ContactForm.propTypes = {
-  cartItems: PropTypes.array.isRequired,
-  price: PropTypes.number.isRequired,
-  loading: PropTypes.bool.isRequired,
+  cartItems: PropTypes.array,
+  price: PropTypes.number,
+  loading: PropTypes.bool,
   token: PropTypes.string,
   userId: PropTypes.string,
-  purchaseOrder: PropTypes.func.isRequired
+  purchaseOrder: PropTypes.func
 };
-export default (ErrorHandler(ContactForm, axios));
+
+export default ErrorHandler(ContactForm, axios);

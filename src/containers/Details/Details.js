@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Details.scss';
-import { useDispatch, useSelector, connect } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import DetailItem from './DetailItem/DetailItem';
 import Button from '../../components/UI/Button/Button';
