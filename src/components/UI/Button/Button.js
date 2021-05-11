@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.scss';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,9 +27,9 @@ const MyButton = ({ disabled, clicked, btnType, children }) => {
       >
         {children}
       </button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons" size="small" className={classes.margin}>
-        Link
- </Button>
+      {/* <Button variant="outlined" color="primary" href="#outlined-buttons" size="small" className={classes.margin}> */}
+        {/* Link */}
+ {/* </Button> */}
     </>
   )
 }

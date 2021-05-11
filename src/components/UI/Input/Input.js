@@ -1,9 +1,7 @@
 import React from 'react';
 import './Input.scss';
 
-const input = (props) => {
-  const { invalid, shouldValidate, touched, elementType, elementConfig, value, changed, label } = props;
-
+const input = ({ invalid, shouldValidate, touched, elementType, elementConfig, value, changed, label } ) => {
   let inputElement = null;
   const inputClasses = ["input"];
 
