@@ -1,15 +1,14 @@
 import React from 'react';
 import './WishlistItem.scss';
-import { connect } from 'react-redux';
-import * as actions from '../../../store/actions';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import Button from '../../../components/UI/Button/Button';
+import { showDetails, removeWishlistItem } from './../../../store/actions/productActions';
 
-const wishlistItem = (props) => {
-  const { id, title, subtitle, img, description, price } = props.item;
-
+const WishlistItem = ({ item }) => {
+  const { id, title, subtitle, img, description, price } = item
+  const dispatch = useDispatch();
   return (
     <li className="wishlist-item">
       <h3 className="wishlist-title">{title}</h3>
@@ -24,9 +23,9 @@ const wishlistItem = (props) => {
           <h3 className="wishlist-subtitle">Price: {price}.00 $</h3>
           <div className="btn-wrapper">
             <Link to={`/details/${id}`}>
-              <Button clicked={() => props.showDetails(id)}>Show Details</Button>
+              <Button clicked={(id) => dispatch(showDetails(id))}>Show Details</Button>
             </Link>
-            <Button clicked={() => props.removeWishlistItem(id)} btnType="dark">Remove</Button>
+            <Button clicked={(id) => dispatch(removeWishlistItem(id))} btnType="dark">Remove</Button>
           </div>
         </div>
       </div>
@@ -34,16 +33,8 @@ const wishlistItem = (props) => {
   );
 };
 
-wishlistItem.propTypes = {
-  showDetails: PropTypes.func.isRequired,
-  removeWishlistItem: PropTypes.func.isRequired
+WishlistItem.propTypes = {
+  showDetails: PropTypes.func,
+  removeWishlistItem: PropTypes.func
 };
-
-const mapDispatchToProps = dispatch => {
-  return {
-    showDetails: id => dispatch(actions.showDetails(id)),
-    removeWishlistItem: id => dispatch(actions.removeWishlistItem(id))
-  };
-};
-
-export default connect(null, mapDispatchToProps)(wishlistItem);
+export default WishlistItem;
