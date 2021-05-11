@@ -16,6 +16,7 @@ function ProductList() {
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const modalProduct = useSelector(state => state.interface.modalProduct)
   const checkboxValue = useSelector(state => state.products.sortCheckboxValue)
+  const { title, img, subtitle, price, id } = modalProduct;
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -32,7 +33,6 @@ function ProductList() {
     return <Redirect to="/" />
   };
 
-  const { title, img, subtitle, price, id } = modalProduct;
   console.log("products", products)
   return (
     <>
@@ -51,13 +51,13 @@ function ProductList() {
           <h3 className="modal-title">Sizes: S, M, L, XL, XXL</h3>
           <div className="btn-wrapper">
             <Link to={`/details/${id}`}>
-              <Button clicked={() => showDetailsByModal(id)}>Show Details</Button>
+              <Button clicked={() => showDetailsByModal()}>Show Details</Button>
             </Link>
           </div>
         </Modal>
         <div className="filter-panel">
           Sort by:
-          <select onChange={handleChange} value={checkboxValue}>
+          <select onChange={()=>handleChange()} value={checkboxValue}>
             <option value="relevance">Relevance</option>
             <option value="price - low to high">Price - low to high</option>
             <option value="price - high to low">Price - high to low</option>
@@ -73,8 +73,8 @@ function ProductList() {
               <Product
                 key={product.id}
                 product={product}
-                showModal={() => dispatch(openModal())}
-                showDetails={() => dispatch(showDetails())}
+                showModal={(id) => dispatch(openModal(id))}
+                showDetails={(id) => dispatch(showDetails(id))}
               />
             ))}
           </ul>
