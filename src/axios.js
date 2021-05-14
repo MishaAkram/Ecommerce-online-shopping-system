@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const instance = axios.create({
-  baseURL: 'https://react-elegant-store.firebaseio.com/'
+export default axios.create({
+  baseURL: 'https://react-online-shopping-system-default-rtdb.asia-southeast1.firebasedatabase.app/'
 });
 
-export default instance;
