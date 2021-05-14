@@ -7,7 +7,7 @@ const AsyncComponent = (importComponent) =>{
       .then(cmp => {
         setComponent(cmp.default);
       });
-  })
+  },[setComponent,importComponent])
   const C = component;
   return function (props) {
     return C ? <C {...props} /> : null;
