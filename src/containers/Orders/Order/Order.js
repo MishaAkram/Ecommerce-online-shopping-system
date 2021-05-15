@@ -5,7 +5,7 @@ const order = ({products,price}) => {
   return (
     <li className="order-item">
       <ul className="order-products">
-        {products.map(product => (
+         {products.map(product => (
           <li key={product.id}>
             <p className="order-title"><span className="bold">Name: </span>{product.title}</p>
             <p className="order-title"><span className="bold">Size: </span>{product.size}</p>

@@ -31,17 +31,19 @@ export const purchaseInit = () => {
 };
 
 // after order button click
-export const purchaseOrder = (orderData, token) => {
+export const purchaseOrder = (orderData) => {
   return dispatch => {
     dispatch(purchaseOrderStart());
 
-    axios.post('/orders.json?auth=' + token, orderData)
+    axios.post('/orders.json', orderData)
       .then(res => {
         dispatch(purchaseOrderSuccess(res.data.name, orderData));
         dispatch(actions.clearCart());
+        console.log("res",res)
       })
       .catch(err => {
         dispatch(purchaseOrderFail(err));
+        console.log("err",err)
       });
   }
 };

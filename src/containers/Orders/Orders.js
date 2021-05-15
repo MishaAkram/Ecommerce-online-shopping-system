@@ -9,21 +9,22 @@ import Order from './Order/Order';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { fetchOrders } from './../../store/actions/orderActions';
 function Orders() {
-  const orders = useSelector(state => state.order.orders)
+  const order = useSelector(state => state.order.orders)
   const loading = useSelector(state => state.order.loading)
   const token = useSelector(state => state.auth.token)
   const userId = useSelector(state => state.auth.userId)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchOrders(token, userId));
-  },[dispatch,token,userId]);
-  if (loading){
+  }, [dispatch, token, userId]);
+  if (loading) {
     <Spinner />
   }
+  let orders = <Spinner />;
   if (!loading) {
     (orders.length === 0)
-      ? <p>You do not have any orders yet.</p>
-      : orders.map(order => (
+      ? orders = <p>You do not have any orders yet.</p>
+      : orders = order.map(order => (
         <Order key={order.id} products={order.products} price={order.price} />
       ))
   };
@@ -43,11 +44,11 @@ function Orders() {
 };
 
 Orders.propTypes = {
-  orders: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
-  token: PropTypes.string.isRequired,
-  userId: PropTypes.string.isRequired,
-  fetchOrders: PropTypes.func.isRequired
+  orders: PropTypes.array,
+  loading: PropTypes.bool,
+  token: PropTypes.string,
+  userId: PropTypes.string,
+  fetchOrders: PropTypes.func
 };
 const mapStateToProps = state => {
   return {
@@ -57,4 +58,4 @@ const mapStateToProps = state => {
     userId: state.auth.userId
   };
 };
-export default connect(mapStateToProps,null)(ErrorHandler(Orders, axios));
+export default connect(mapStateToProps, null)(ErrorHandler(Orders, axios));

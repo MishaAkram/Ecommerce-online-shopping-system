@@ -1,17 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import './Cart.scss';
-import {useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import PropTypes from 'prop-types';
 import { useHistory } from 'react-router'
 import Button from '../../components/UI/Button/Button';
 import OrderSummary from './OrderSummary/OrderSummary';
 import ContactForm from './ContactForm/ContactForm';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
-import { removeCartItem ,handleProductAmount,clearCart,calculateOrder} from './../../store/actions/productActions';
+import { removeCartItem, handleProductAmount, clearCart, calculateOrder } from './../../store/actions/productActions';
 
 function Cart() {
   const [orderSummaryAccepted, setOrderSummaryAccepted] = useState(false);
@@ -23,7 +22,7 @@ function Cart() {
 
   useEffect(() => {
     dispatch(calculateOrder());
-  })
+  }, [dispatch])
 
   const acceptOrder = () => {
     if (isAuth) {
@@ -33,13 +32,11 @@ function Cart() {
     };
   };
 
-  let selected = <p className="main-info">You select <span className="bold">{cartItems.length}</span> products.</p>
-  if (cartItems.length === 1) selected = <p className="main-info">You select <span className="bold">1</span> product.</p>;
-
+  
   let list;
   (cartItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' }}>You do not have any products on the list yet.</p> :
-    list = (
-      <TransitionGroup component="ul" className="cart-list">
+  list = (
+    <TransitionGroup component="ul" className="cart-list">
         {cartItems.map(item => {
           const { id, img, title, size, price, total, amount } = item;
           return (
@@ -67,20 +64,19 @@ function Cart() {
         })}
       </TransitionGroup>
     );
-
-  return (
-    <>
+    
+    return (
+      <>
       <ScrollToTopOnMount />
       <div className="cart-container">
         <h2 className="main-title">Shopping Cart</h2>
-        {selected}
+    <p className="main-info">You select <span className="bold">{(cartItems.length === 1)?1:cartItems.length}</span> product.</p>
         {cartItems.length > 0 &&
-          <Button clicked={() => dispatch(clearCart())} btnType="dark">Clear Cart</Button>
-        }
+          <Button clicked={() => dispatch(clearCart())} btnType="dark">Clear Cart</Button>}
         <div className="content-wrapper">
           {list}
           <div className="checkout">
-            {cartItems.length > 0 && <OrderSummary cartItems={cartItems} acceptOrder={acceptOrder} isAuth={isAuth} />}
+            {cartItems.length > 0 && <OrderSummary cartItems={cartItems} acceptOrder={()=>acceptOrder()} isAuth={isAuth} />}
             {cartItems.length > 0 && orderSummaryAccepted && <ContactForm />}
           </div>
         </div>
@@ -89,15 +85,4 @@ function Cart() {
     </>
   );
 }
-
-Cart.propTypes = {
-  cartItems: PropTypes.array.isRequired,
-  purchased: PropTypes.bool.isRequired,
-  isAuth: PropTypes.bool.isRequired,
-  remove: PropTypes.func.isRequired,
-  handleProductAmount: PropTypes.func.isRequired,
-  calculateOrder: PropTypes.func.isRequired,
-  clearCart: PropTypes.func.isRequired,
-};
-
 export default Cart;
