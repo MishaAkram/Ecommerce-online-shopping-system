@@ -54,7 +54,7 @@ function ContactForm() {
       formData[formElementIndentifier] = orderForm[formElementIndentifier].value
     }
     const order = { products: cartItems, price: price, orderData: formData, userId: userId };
-    dispatch(purchaseOrder(order, token));
+    dispatch(purchaseOrder(order));
   };
 
   const inputChangedHandler = (e, inputIndentifier) => {// ====== Immutably changind input values ======
@@ -84,7 +84,7 @@ function ContactForm() {
   let form = (
     <form className="contact-form" onSubmit={(e) => orderHandler(e)}>
       <h3 className="title">Enter Your Contact Data</h3>
-      <Input elementType="..." elementConfig="..." value="..." />
+      {/* <Input elementType="..." elementConfig="..." value="..." /> */}
       {formElementsArray.map(formElement => (
         <Input
           key={formElement.id}

@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import asyncComponent from './hoc/asyncComponent';
 import HomePage from './containers/HomePage/HomePage';
 import ProductList from './containers/ProductList/ProductList';
@@ -10,11 +10,14 @@ import Details from './containers/Details/Details';
 import Wishlist from './containers/Wishlist/Wishlist';
 import Contact from './containers/Contact/Contact';
 import Logout from './containers/Auth/Logout/Logout';
-
-
+import {authCheckState} from './store/actions/authActions'
 
 function App() {
   const isAuth = useSelector(state => state.auth.token !== null)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(authCheckState());
+  })
   const asyncOrders = asyncComponent(() => {
     return import('./containers/Orders/Orders');
   });
@@ -34,7 +37,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/productlist/:type" component={ProductList} />
             <Route path="/details/:id" component={Details} />
-            <Route path="/cart" component={Cart} />    
+            <Route path="/cart" component={Cart} />
 
             <Redirect to="/" />
           </Switch>

@@ -4,12 +4,12 @@ const AsyncComponent = (importComponent) =>{
   const [component, setComponent] = useState(null)
   useEffect(() => {
     importComponent()
-      .then(cmp => {
-        setComponent(cmp.default);
-      });
+    .then(cmp => {
+      setComponent(cmp.default);
+    });
   },[setComponent,importComponent])
-  const C = component;
   return function (props) {
+  const C = component;
     return C ? <C {...props} /> : null;
   }
 }

@@ -27,7 +27,7 @@ export {
 } from './orderActions';
 
 export {
-  auth,
+  onAuth,
   logout,
   authCheckState
 } from './authActions';
