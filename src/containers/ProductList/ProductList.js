@@ -11,7 +11,6 @@ import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { closeModal, handleCheckboxValue, handleDirection, sortProducts, openModal, showDetails } from '../../store/actions';
 
 function ProductList() {
-  // const [checkboxvalue, setChechboxValue] = useState("relevance")
   const products = useSelector(state => state.products.products)
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const modalProduct = useSelector(state => state.interface.modalProduct)
@@ -56,7 +55,7 @@ function ProductList() {
         </Modal>
         <div className="filter-panel">
           Sort by:
-          <select onChange={() => handleChange()} value={checkboxValue}>
+          <select onChange={(e) => handleChange(e)} value={checkboxValue}>
             <option value="relevance">Relevance</option>
             <option value="price - low to high">Price - low to high</option>
             <option value="price - high to low">Price - high to low</option>
