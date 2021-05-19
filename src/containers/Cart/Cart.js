@@ -25,7 +25,7 @@ const thumb = {
   width: '700px',
   height: "auto",
   padding: 7,
-  // boxSizing: 'border-box'
+  boxSizing: 'border-box'
 };
 const thumb2 = {
   display: 'inline-flex',
@@ -36,7 +36,7 @@ const thumb2 = {
   width: '150px',
   height: "200px",
   padding: 5,
-  // boxSizing: 'border-box'
+  boxSizing: 'border-box'
 };
 function Cart() {
   const [orderSummaryAccepted, setOrderSummaryAccepted] = useState(false);

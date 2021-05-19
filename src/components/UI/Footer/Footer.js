@@ -45,7 +45,23 @@ const footer = () => (
             </div>
           </div>
         </div>
-        <div className="col item social"><a href="/"><i className="icon ion-social-facebook"></i></a><a href="/"><i className="icon ion-social-twitter"></i></a><a href="/"><i className="icon ion-social-snapchat"></i></a><a href="/"><i className="icon ion-social-instagram"></i></a></div>
+        <div className="col item social"><a href="/">
+        <i className="bi bi-facebook"></i>
+          <i className="icon ion-social-facebook"></i>
+          </a>
+          <a href="/">
+            <i className="icon ion-social-twitter">
+            </i>
+            </a>
+            <a href="/">
+              <i className="icon ion-social-snapchat">
+                </i>
+                </a>
+                <a href="/">
+                  <i className="icon ion-social-instagram">
+                    </i>
+                    </a>
+                    </div>
         <p className="copyright">Company Name © 2021</p>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Details.scss';
-import { useDispatch, useSelector} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import DetailItem from './DetailItem/DetailItem';
 import Button from '../../components/UI/Button/Button';
@@ -8,9 +8,31 @@ import Modal from '../../components/UI/Modal/Modal';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { openModal, closeModal } from './../../store/actions/interfaceActions';
 import { addToCart, addToWishlist } from './../../store/actions/productActions'
-import PropTypes from 'prop-types';
-
+import { PropTypes } from 'prop-types';
 function Details() {
+  const style={
+    margin: 0,
+    borderRadius: 0,
+    textTransform: "uppercase",
+    transition: "all .5s ease",
+    backfaceVisibility: "hidden",
+    backgroundImage: "none",
+    background: "#282828",
+    border: "1px solid #282828",
+    color: "#fff",
+    cursor: "pointer",
+    display: "inlineblock",
+    fontFamily: "Poppins, Helvetica Neue, Helvetica, Arial, sansserif",
+    fontWeight: 700,
+    boxSizing: "borderbox",
+    fontSize:"14px",
+    font: "600 14px/1.35 Montserrat,Helvetica\ Neue,Verdana,Arial,sansserif",
+    lineHeight: "2.2rem",
+    padding: "14px 17px",
+    width: "100%",
+    verticalAlign: "top",
+    marginBottom: "12px"
+  }
   const [value, setValue] = useState('')
   const dispatch = useDispatch();
   const modalShowed = useSelector(state => state.interface.modalShowed)
@@ -85,14 +107,16 @@ function Details() {
             <label htmlFor="switch_xxl">XXL</label>
           </div>
           <div className="button-wrapper">
-            <Button
-              clicked={() => handleAddToCart()}
-              disabled={detailProduct.inCart ? true : false}>
+               <button  style={style}
+               onClick={() => handleAddToCart()}
+               disabled={detailProduct.inCart ? true : false}
+               >
               {detailProduct.inCart ?
                 (<p>In Cart</p>) :
                 (<p>Add to Cart</p>)
               }
-            </Button>
+            </button>
+            
             <Button
               clicked={() => dispatch(addToWishlist(detailProduct.id))}
               disabled={detailProduct.inWishlist ? true : false}>
@@ -116,3 +140,4 @@ Details.propTypes = {
   addToWishlist: PropTypes.func
 };
 export default Details
+
