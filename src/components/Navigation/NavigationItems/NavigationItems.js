@@ -6,9 +6,10 @@ import { filterProducts } from '../../../store/actions';
 import NavigationItem from './NavigationItem';
 
 const style={
-  fontWeight: "550",
-    fontSize: "1em",
-    marginBottom: ".3em"
+  fontWeight: "450",
+    fontSize: "1.1em",
+    marginBottom: ".3em",
+    fontFamily: "ACourier New, monospace"
 }
 const navigationItems = ({ filterProducts, isAuth }) => (
   <ul className="nav-list">
