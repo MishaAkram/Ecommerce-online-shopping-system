@@ -18,20 +18,25 @@ const thumb2 = {
 function DetailItem({ children }) {
   const detailProduct = useSelector(state => state.products.detailProduct)
   if (detailProduct === null) return <Redirect to="/" />;
-  const { title, subtitle, img, description, price } = detailProduct;
+  const { title, subtitle, img, description, price, category, gender, code, previousPrice } = detailProduct;
   return (
     <li className="detail-item">
-      <h3 className="detail-title">{title}</h3>
       <p className="detail-value">{subtitle}</p>
       <div className="detail-content">
         <div className="detail-img-wrapper">
           <img src={img} alt="" className="detail-item-img" style={thumb2} />
         </div>
         <div className="detail-info">
-          <h3 className="detail-subtitle">Description:</h3>
-          <p className="detail-value">{description}</p>
-          <h3 className="detail-subtitle">Price: {price}.00 $</h3>
-          <Divider/>
+          <h3 className="detail-title">{title}</h3>
+          <h2 className="text-uppercase font-weight-bold"
+           style={{ fontFamily: "ACourier New, monospace" }}
+           >{description}</h2>
+          <h3 style={{ fontFamily: "ACourier New, monospace" }}>Description:</h3>
+          <h6 style={{ fontSize: "12px" }}>{code}</h6>
+          <h3 style={{ fontFamily: "ACourier New, monospace" }}>{category}</h3>
+          <h3 className="detail-subtitle">{gender}</h3>
+          <h3 style={{ fontFamily: "ACourier New, monospace" }} >PKR {price} <strike style={{color:"red"}}>{" "}{previousPrice}{" "}</strike></h3>
+          <Divider />
           {children}
         </div>
       </div>
