@@ -12,17 +12,17 @@ const femaleCategories = [
     content: 'Women',
     linkType: 'main'
   },
-  // // {
-  // //   category: 'women-coats',
-  // //   content: 'Coats'
-  // // },
-  // {
-  //   category: 'women-jackets',
-  //   content: 'Jackets',
-  // },
   {
-    category: 'women-suits',
-    content: 'Suits',
+    category: 'kurtis',
+    content: 'Kurtis'
+  },
+  {
+    category: 'stitched',
+    content: 'Stitched Dresses',
+  },
+  {
+    category: 'un-stitched',
+    content: 'Unstitched Dresses',
   },
   // {
   //   category: 'women-shirts',
@@ -32,35 +32,65 @@ const femaleCategories = [
   //   category: 'women-t-shirts',
   //   content: 'T-shirts',
   // },
-  {
-    category: 'women-shoes',
-    content: 'Shoes',
-  },
-  {
-    category: 'women-perfumes',
-    content: 'Perfumes',
-  },
   // {
-  //   category: 'male',
-  //   content: 'Men',
-  //   linkType: 'main'
+  //   category: 'women-shoes',
+  //   content: 'Shoes',
   // },
   // {
-  //   category: 'men-coats',
-  //   content: 'Coats',
+  //   category: 'women-hats',
+  //   content: 'Hats',
+  // },
+
+  // {
+  //   category: 'women-coats',
+  //   content: 'Coats'
   // },
   // {
-  //   category: 'men-jackets',
+  //   category: 'women-jackets',
   //   content: 'Jackets',
   // },
   // {
-  //   category: 'men-suits',
+  //   category: 'women-suits',
   //   content: 'Suits',
   // },
   // {
-  //   category: 'men-shirts',
+  //   category: 'women-shirts',
   //   content: 'Shirts',
   // },
+  // {
+  //   category: 'women-t-shirts',
+  //   content: 'T-shirts',
+  // },
+  // {
+  //   category: 'women-shoes',
+  //   content: 'Shoes',
+  // },
+  // {
+  //   category: 'women-hats',
+  //   content: 'Hats',
+  // },
+  {
+    category: 'male',
+    content: 'Accessories',
+    linkType: 'main'
+  },
+  {
+    category: 'bracelets',
+    content: 'Bracelets',
+  },
+  {
+    category: 'earings',
+    content: 'Earings',
+  },
+  {
+    category: 'footware',
+    content: 'Footware',
+  },
+  {
+    category: 'stoles',
+    content: 'Stoles',
+  },
+
   // {
   //   category: 'men-t-shirts',
   //   content: 'T-shirts',
