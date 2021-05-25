@@ -829,10 +829,10 @@ export const productList = [
     gender: 'male'
   },
 
-  // MEN JACKETS
+  // MEN FOOTWARE
   {
     id: 221,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/10.jpg',
     title: 'Mens jacket one',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -847,7 +847,7 @@ export const productList = [
   },
   {
     id: 222,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/adelaide.jpg',
     title: 'Mens jacket two',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -862,7 +862,7 @@ export const productList = [
   },
   {
     id: 223,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/11.jpg',
     title: 'Mens jacket three',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -877,7 +877,7 @@ export const productList = [
   },
   {
     id: 224,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/bronzer.jpg',
     title: 'Mens jacket four',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -892,7 +892,7 @@ export const productList = [
   },
   {
     id: 225,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/12.jpg',
     title: 'Mens jacket five',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -907,7 +907,86 @@ export const productList = [
   },
   {
     id: 226,
-    img: '../img/jacket-male.png',
+    img: '../img/footware/pistachio.jpg',
+    title: 'Mens jacket six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 330,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'footware',
+    gender: 'male'
+  },
+  {
+    id: 227,
+    img: '../img/footware/13.jpg',
+    title: 'Mens jacket six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 330,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'footware',
+    gender: 'male'
+  },
+
+  {
+    id: 228,
+    img: '../img/footware/samar.jpg',
+    title: 'Mens jacket six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 330,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'footware',
+    gender: 'male'
+  },
+
+  {
+    id: 229,
+    img: '../img/footware/14.jpg',
+    title: 'Mens jacket six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 330,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'footware',
+    gender: 'male'
+  },
+
+  {
+    id: 230,
+    img: '../img/footware/zanjeer.jpg',
+    title: 'Mens jacket six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 330,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'footware',
+    gender: 'male'
+  },
+
+  {
+    id: 2030,
+    img: '../img/footware/15.jpg',
     title: 'Mens jacket six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
