@@ -921,10 +921,10 @@ export const productList = [
     gender: 'male'
   },
 
-  // MEN SHIRTS
+  // MEN EARINGS
   {
     id: 231,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/abstract.jpg',
     title: 'Mens shirt one',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -939,7 +939,7 @@ export const productList = [
   },
   {
     id: 232,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/contemporary.jpg',
     title: 'Mens shirt two',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -954,7 +954,7 @@ export const productList = [
   },
   {
     id: 233,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/earings.jpg',
     title: 'Mens shirt three',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -969,7 +969,7 @@ export const productList = [
   },
   {
     id: 234,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/geometric e.jpg',
     title: 'Mens shirt four',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -984,7 +984,7 @@ export const productList = [
   },
   {
     id: 235,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/jjle-er-0152.jpg',
     title: 'Mens shirt five',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -999,7 +999,82 @@ export const productList = [
   },
   {
     id: 236,
-    img: '../img/shirt-male.png',
+    img: '../img/earing/multi layered oval e.jpg',
+    title: 'Mens shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 400,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'earings',
+    gender: 'male'
+  },
+  {
+    id: 237,
+    img: '../img/earing/patterned hoops.jpg',
+    title: 'Mens shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 400,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'earings',
+    gender: 'male'
+  },
+  {
+    id: 238,
+    img: '../img/earing/peari tier e.jpg',
+    title: 'Mens shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 400,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'earings',
+    gender: 'male'
+  },
+  {
+    id: 239,
+    img: '../img/earing/pearl finish hoops.jpg',
+    title: 'Mens shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 400,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'earings',
+    gender: 'male'
+  },
+  {
+    id: 240,
+    img: '../img/earing/pearl hoop earings.jpg',
+    title: 'Mens shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 400,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'earings',
+    gender: 'male'
+  },
+  {
+    id: 2040,
+    img: '../img/earing/pearl tier.jpg',
     title: 'Mens shirt six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
