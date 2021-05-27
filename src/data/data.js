@@ -277,10 +277,10 @@ export const productList = [
     gender: 'female'
   },
 
-  // WOMEN SHIRTS
+  // WOMEN KURTIS
   {
     id: 131,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/104-21_1_.jpg',
     title: 'Womans shirt one',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -290,12 +290,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
     gender: 'female'
   },
   {
     id: 132,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/110-21_1_.jpg',
     title: 'Womans shirt two',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -305,12 +305,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
     gender: 'female'
   },
   {
     id: 133,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/115-21_1_.jpg',
     title: 'Womans shirt three',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -320,12 +320,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
     gender: 'female'
   },
   {
     id: 134,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/124-21_1_.jpg',
     title: 'Womans shirt four',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -335,12 +335,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
     gender: 'female'
   },
   {
     id: 135,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/125-21_1_.jpg',
     title: 'Womans shirt five',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -350,12 +350,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
     gender: 'female'
   },
   {
     id: 136,
-    img: '../img/shirt-female.png',
+    img: '../img/kurti/128-21_1_.jpg',
     title: 'Womans shirt six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -365,7 +365,112 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-shirts',
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 137,
+    img: '../img/kurti/129-21_1_.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 138,
+    img: '../img/kurti/130-21_1_.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 139,
+    img: '../img/kurti/144-20_1__1.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 140,
+    img: '../img/kurti/165-21_1_.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 1040,
+    img: '../img/kurti/167-21_1_.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 10040,
+    img: '../img/kurti/x.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
+    gender: 'female'
+  },
+  {
+    id: 136,
+    img: '../img/kurti/ygkl-112-21.jpg',
+    title: 'Womans shirt six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 110,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'kurtis',
     gender: 'female'
   },
 
@@ -1262,7 +1367,7 @@ export const productList = [
   // MEN STOLES
   {
     id: 251,
-    img: '../img/stoles/2_46_129.jpg',
+    img: '../img/stole/2_46_129.jpg',
     title: 'Mens suit one',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1277,7 +1382,7 @@ export const productList = [
   },
   {
     id: 252,
-    img: '../img/stoles/20-2663.jpg',
+    img: '../img/stole/20-2663.jpg',
     title: 'Mens suit two',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1292,7 +1397,7 @@ export const productList = [
   },
   {
     id: 253,
-    img: '../img/stoles/21-2601.jpg',
+    img: '../img/stole/21-2601.jpg',
     title: 'Mens suit three',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1307,7 +1412,7 @@ export const productList = [
   },
   {
     id: 254,
-    img: '../img/stoles/21-2605-21-002.jpg',
+    img: '../img/stole/21-2605-21-002.jpg',
     title: 'Mens suit four',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1322,7 +1427,7 @@ export const productList = [
   },
   {
     id: 255,
-    img: '../img/stoles/21-2621.jpg',
+    img: '../img/stole/21-2621.jpg',
     title: 'Mens suit five',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1337,7 +1442,7 @@ export const productList = [
   },
   {
     id: 256,
-    img: '../img/stoles/21-2625.jpg',
+    img: '../img/stole/21-2625.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1352,7 +1457,7 @@ export const productList = [
   },
   {
     id: 257,
-    img: '../img/stoles/21-2628.jpg',
+    img: '../img/stole/21-2628.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1367,7 +1472,7 @@ export const productList = [
   },
   {
     id: 258,
-    img: '../img/stoles/21-2629.jpg',
+    img: '../img/stole/21-2629.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1382,7 +1487,7 @@ export const productList = [
   },
   {
     id: 259,
-    img: '../img/stoles/21-2631.jpg',
+    img: '../img/stole/21-2631.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1397,7 +1502,7 @@ export const productList = [
   },
   {
     id: 260,
-    img: '../img/stoles/21-2635.jpg',
+    img: '../img/stole/21-2635.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1412,7 +1517,7 @@ export const productList = [
   },
   {
     id: 2060,
-    img: '../img/stoles/stl-21-2630.jpg',
+    img: '../img/stole/stl-21-2630.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -1427,7 +1532,7 @@ export const productList = [
   },
   {
     id: 20060,
-    img: '../img/stoles/stl-21-2632.jpg',
+    img: '../img/stole/stl-21-2632.jpg',
     title: 'Mens suit six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
