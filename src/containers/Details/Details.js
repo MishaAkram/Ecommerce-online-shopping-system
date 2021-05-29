@@ -7,10 +7,10 @@ import Button from '../../components/UI/Button/Button';
 import Modal from '../../components/UI/Modal/Modal';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { openModal, closeModal } from './../../store/actions/interfaceActions';
-import { addToCart, addToWishlist } from './../../store/actions/productActions'
+import { addToCart, addToWishlist} from './../../store/actions/productActions'
 import { PropTypes } from 'prop-types';
-function Details() {
-  const style={
+function Details(props) {
+  const style = {
     margin: 0,
     borderRadius: 0,
     textTransform: "uppercase",
@@ -25,8 +25,8 @@ function Details() {
     fontFamily: "Poppins, Helvetica Neue, Helvetica, Arial, sansserif",
     fontWeight: 700,
     boxSizing: "borderbox",
-    fontSize:"14px",
-    font: "600 14px/1.35 Montserrat,Helvetica\ Neue,Verdana,Arial,sansserif",
+    fontSize: "14px",
+    font: "600 14px/1.35 Montserrat,Helvetica Neue,Verdana,Arial,sansserif",
     lineHeight: "2.2rem",
     padding: "14px 17px",
     width: "100%",
@@ -37,6 +37,7 @@ function Details() {
   const dispatch = useDispatch();
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const detailProduct = useSelector(state => state.products.detailProduct)
+  const data=props.location.data
 
   const handleAddToCart = () => {
     (value === '') ?
@@ -57,7 +58,7 @@ function Details() {
         <Button clicked={() => dispatch(closeModal())} btnType="dark">Got it</Button>
       </Modal>
       <ul className="details-container">
-        <DetailItem>
+        <DetailItem data={data}>
           <p className="detail-subtitle">Select Size:</p>
           <div className="switch-field">
             <input
@@ -107,16 +108,15 @@ function Details() {
             <label htmlFor="switch_xxl">XXL</label>
           </div>
           <div className="button-wrapper">
-               <button  style={style}
-               onClick={() => handleAddToCart()}
-               disabled={detailProduct.inCart ? true : false}
-               >
+            <button style={style}
+              onClick={() => handleAddToCart()}
+              disabled={detailProduct.inCart ? true : false}>
               {detailProduct.inCart ?
                 (<p>In Cart</p>) :
                 (<p>Add to Cart</p>)
               }
             </button>
-            
+
             <Button
               clicked={() => dispatch(addToWishlist(detailProduct.id))}
               disabled={detailProduct.inWishlist ? true : false}>

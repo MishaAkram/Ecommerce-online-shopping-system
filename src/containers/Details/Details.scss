@@ -53,4 +53,32 @@
     display: flex;
     flex-direction: column;
   }
+  .button-wrap {
+    display: flex;
+  }
+  .size {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: .5em;
+    background: none;
+    border: 1px solid #000;
+    line-height: 1.5em;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    outline: none;
+  }
+
+  button.size:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button.size:disabled {
+    border: 1px solid #666;
+    background: transparent;
+    color: #666;
+    cursor: no-drop;
+  }
 }
