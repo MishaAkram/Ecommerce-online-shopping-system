@@ -48,7 +48,7 @@ function Cart() {
 
   useEffect(() => {
     dispatch(calculateOrder());
-  }, [dispatch])
+  })
 
   const acceptOrder = () => {
     if (isAuth) {
@@ -71,11 +71,15 @@ function Cart() {
                 <Card
                   className="cart-item"
                   style={thumb}
-                  boxShadow={3}>
+                  boxshadow={3}>
                   <div className="img-wrapper">
-                    <Link to={`/details/${id}`}>
-                    <img className="cart-item-img" src={img} style={thumb2} alt="product img" />
-                    </Link>
+                    <img className="cart-item-img" src={img} style={thumb2} alt="product img"
+                      onClick={() =>
+                        history.push({
+                          pathname: "/details/" + id,
+                          data: item
+                        })
+                      } />
                   </div>
                   <div className="cart-item-content">
                     <h3 className="name">{title}</h3>
