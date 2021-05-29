@@ -33,12 +33,11 @@ function App() {
             {isAuth && <Route path="/orders" component={asyncOrders} />}
             {isAuth && <Route path="/logout" component={Logout} />}
             <Route path="/wishlist" component={Wishlist} />
-            <Route path="/" exact component={HomePage} />
             <Route path="/contact" component={Contact} />
-            <Route path="/productlist/:type" component={ProductList} />
+            <Route path="/products/:type" component={ProductList} />
             <Route path="/details/:id" component={Details} />
             <Route path="/cart" component={Cart} />
-
+            <Route path="/" exact component={HomePage} />
             <Redirect to="/" />
           </Switch>
         </Layout>

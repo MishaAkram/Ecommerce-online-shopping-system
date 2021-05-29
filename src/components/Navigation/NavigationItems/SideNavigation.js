@@ -24,53 +24,9 @@ const femaleCategories = [
     category: 'un-stitched',
     content: 'Unstitched Dresses',
   },
-  // {
-  //   category: 'women-shirts',
-  //   content: 'Shirts',
-  // },
-  // {
-  //   category: 'women-t-shirts',
-  //   content: 'T-shirts',
-  // },
-  // {
-  //   category: 'women-shoes',
-  //   content: 'Shoes',
-  // },
-  // {
-  //   category: 'women-hats',
-  //   content: 'Hats',
-  // },
-
-  // {
-  //   category: 'women-coats',
-  //   content: 'Coats'
-  // },
-  // {
-  //   category: 'women-jackets',
-  //   content: 'Jackets',
-  // },
-  // {
-  //   category: 'women-suits',
-  //   content: 'Suits',
-  // },
-  // {
-  //   category: 'women-shirts',
-  //   content: 'Shirts',
-  // },
-  // {
-  //   category: 'women-t-shirts',
-  //   content: 'T-shirts',
-  // },
-  // {
-  //   category: 'women-shoes',
-  //   content: 'Shoes',
-  // },
-  // {
-  //   category: 'women-hats',
-  //   content: 'Hats',
-  // },
+  
   {
-    category: 'male',
+    category: 'accessories',
     content: 'Accessories',
     linkType: 'main'
   },
@@ -91,18 +47,6 @@ const femaleCategories = [
     content: 'Stoles',
   },
 
-  // {
-  //   category: 'men-t-shirts',
-  //   content: 'T-shirts',
-  // },
-  // {
-  //   category: 'men-shoes',
-  //   content: 'Shoes',
-  // },
-  // {
-  //   category: 'men-hats',
-  //   content: 'Hats',
-  // },
 ];
 
 const sideNavigation = ({ filterProducts, children }) => (
@@ -116,7 +60,7 @@ const sideNavigation = ({ filterProducts, children }) => (
             key={category}
             clicked={() => filterProducts(category)}
             linkType={linkType}
-            link={`/productlist/${category}`}>
+            link={`/products/${category}`}>
             {content}
           </NavigationItem>
         )

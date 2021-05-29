@@ -15,7 +15,7 @@ function ProductList() {
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const modalProduct = useSelector(state => state.interface.modalProduct)
   const checkboxValue = useSelector(state => state.products.sortCheckboxValue)
-  const { title, img, subtitle, price, id } = modalProduct;
+  const {title, img, subtitle, price, id } = modalProduct;
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -67,15 +67,15 @@ function ProductList() {
             <SideNavigation />
           </div>
           <ul className="product-list">
-            {products.map((product,index) => {
-              return(
-              <Product
-                key={index}
-                product={product}
-                showModal={(id) => dispatch(openModal(id))}
-                showDetails={(id) => dispatch(showDetails(id))}
-              />)
-              })}
+            {products.map((product, index) => {
+              return (
+                <Product
+                  key={index}
+                  product={product}
+                  showModal={(id) => dispatch(openModal(id))}
+                  showDetails={(id) => dispatch(showDetails(id))}
+                />)
+            })}
           </ul>
         </div>
       </div>

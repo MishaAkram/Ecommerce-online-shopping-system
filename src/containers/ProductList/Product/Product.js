@@ -68,7 +68,7 @@ class Product extends Component {
      
       >
         <Card style={thumb} className="product"
-         boxShadow={3}>
+         boxshadow={3}>
           <CardActionArea>
             <CardMedia className="img-wrapper">
               {!this.state.isLoaded && <Spinner />}

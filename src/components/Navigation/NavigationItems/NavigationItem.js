@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const navigationItem = ({ clicked, style, linkType, link, exact, children }) => (
-  <li
+  <p
     style={{ alignSelf: 'flex-start' }}
     className="nav-link-wrapper">
     <NavLink
@@ -13,7 +13,7 @@ const navigationItem = ({ clicked, style, linkType, link, exact, children }) => 
       exact={exact}>
       {children}
     </NavLink>
-  </li>
+  </p>
 );
 
 export default navigationItem;
