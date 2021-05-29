@@ -7,7 +7,7 @@ import Button from '../../components/UI/Button/Button';
 import Modal from '../../components/UI/Modal/Modal';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { openModal, closeModal } from './../../store/actions/interfaceActions';
-import { addToCart, addToWishlist} from './../../store/actions/productActions'
+import { addToCart, addToWishlist } from './../../store/actions/productActions'
 import { PropTypes } from 'prop-types';
 function Details(props) {
   const style = {
@@ -33,11 +33,13 @@ function Details(props) {
     verticalAlign: "top",
     marginBottom: "12px"
   }
+  const textStyle = { fontFamily: "ACourier New, monospace" }
+
   const [value, setValue] = useState('')
   const dispatch = useDispatch();
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const detailProduct = useSelector(state => state.products.detailProduct)
-  const data=props.location.data
+  const data = props.location.data
 
   const handleAddToCart = () => {
     (value === '') ?
@@ -54,12 +56,12 @@ function Details(props) {
         showModal={modalShowed}
         showBackdrop={modalShowed}
         closeModal={() => dispatch(closeModal())}>
-        <p>You must select size.</p>
-        <Button clicked={() => dispatch(closeModal())} btnType="dark">Got it</Button>
+        <p style={textStyle}>You must select size.</p>
+        <Button clicked={() => dispatch(closeModal())} btnType="dark" style={textStyle} >Got it</Button>
       </Modal>
       <ul className="details-container">
         <DetailItem data={data}>
-          <p className="detail-subtitle">Select Size:</p>
+          <p className="detail-subtitle" style={textStyle}>Select Size:</p>
           <div className="switch-field">
             <input
               type="radio"
@@ -112,8 +114,8 @@ function Details(props) {
               onClick={() => handleAddToCart()}
               disabled={detailProduct.inCart ? true : false}>
               {detailProduct.inCart ?
-                (<p>In Cart</p>) :
-                (<p>Add to Cart</p>)
+                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20 ,fontWeight:600}}>In Cart</p>) :
+                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20 ,fontWeight:600}}>Add to Cart</p>)
               }
             </button>
 
@@ -121,8 +123,8 @@ function Details(props) {
               clicked={() => dispatch(addToWishlist(detailProduct.id))}
               disabled={detailProduct.inWishlist ? true : false}>
               {detailProduct.inWishlist ?
-                (<p>In Wishlist</p>) :
-                (<p>Add to Wishlist</p>)
+                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14 ,fontWeight:200}}>In Wishlist</p>) :
+                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14 ,fontWeight:200}}>Add to Wishlist</p>)
               }
             </Button>
           </div>

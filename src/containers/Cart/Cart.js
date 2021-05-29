@@ -90,8 +90,8 @@ function Cart() {
                       <span className="size">{amount}</span>
                       <button onClick={() => dispatch(handleProductAmount(id, 'increment'))} className="size">+</button>
                     </div>
-                    <p className="value">Price: {price}.00 $</p>
-                    <p className="value">Total: {total}.00 $</p>
+                    <p className="value">Price: PKR {price}</p>
+                    <p className="value">Total: PKR {total}</p>
                     <Button clicked={() => dispatch(removeCartItem(id))} btnType="small">Remove</Button>
                   </div>
                 </Card>
