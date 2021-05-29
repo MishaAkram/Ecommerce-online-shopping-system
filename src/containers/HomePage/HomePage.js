@@ -11,11 +11,29 @@ import Button from '../../components/UI/Button/Button';
 import Modal from '../../components/UI/Modal/Modal';
 import PropTypes from 'prop-types';
 import { closeModal, purchaseInit } from '../../store/actions';
+import pic1 from "./104.jpg"
+import pic2 from "./accessories.jpg"
+
+import { useHistory } from 'react-router';
+import { filterProducts } from './../../store/actions/productActions';
+import NavigationItem from './../../components/Navigation/NavigationItems/NavigationItem';
+const thumb2 = {
+    display: 'inline-flex',
+    borderRadius: 0,
+    border: '3px solid #eaeaea',
+    marginBottom: 2,
+    marginRight: 2,
+    width: 425,
+    height: 600,
+    padding: 5,
+    boxSizing: 'border-box'
+};
 const slides = [];
 slides.push(slideOne, slideTwo, slideThree, slideFour, slideFive);
 function HomePage() {
     const purchased = useSelector(state => state.order.purchased)
     const dispatch = useDispatch();
+    const history = useHistory();
     const closeModale = () => {
         dispatch(purchaseInit())
         dispatch(closeModal())
@@ -40,6 +58,25 @@ function HomePage() {
                         <div key={slide} style={{ backgroundImage: `url('${slide}')` }} className="slide">
                         </div>
                     ))}
+                </div>
+                <br />
+                <div className="col">
+                    <div className="row">
+                        <div style={thumb2}>
+                            <NavigationItem
+                                clicked={() => dispatch(filterProducts('female'))}
+                                link="/products/female" exact>
+                                <img src={pic1} />
+                            </NavigationItem>
+                        </div>
+                        <div style={thumb2}>
+                            <NavigationItem
+                                clicked={() => dispatch(filterProducts('male'))}
+                                link="/products/accessories" exact>
+                                <img src={pic2} style={thumb2} />
+                            </NavigationItem>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
