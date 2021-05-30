@@ -26,8 +26,8 @@ function Wishlist() {
     <>
       <ScrollToTopOnMount />
       <div className="wishlist-container">
-        <h2 className="main-title">Wishlist</h2>
-        <p className="main-info">Lorem ipsum dolor adipiscing elit. Donec eleifend ligula neque, at faucibus metus trum sedru.</p>
+        <h2 className="main-title">My Wishlist</h2>
+        <p className="main-info"></p>
         {list}
         {wishlistItems.length > 0 &&
           <Button clicked={() => dispatch(clearWishlist())} btnType="dark">Clear Wishlist</Button>
