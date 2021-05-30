@@ -4,7 +4,7 @@ export const productList = [
   // WOMEN COATS
   {
     id: 101,
-    img: '../img/bracelete/abstract.jpg',
+    img: '../img/stitched/21-252_1_.jpg',
     title: 'Womans coat one',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -14,12 +14,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
     gender: 'female'
   },
   {
     id: 102,
-    img: '../img/coat-female.png',
+    img: '../img/stitched/21-703_1_.jpg',
     title: 'Womans coat two',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -29,12 +29,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
     gender: 'female'
   },
   {
     id: 103,
-    img: '../img/coat-female.png',
+    img: '../img/stitched/21-730_1_.jpg',
     title: 'Womans coat three',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -44,12 +44,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
     gender: 'female'
   },
   {
     id: 104,
-    img: '../img/coat-female.png',
+    img: '../img/stitched/21-774_1_.jpg',
     title: 'Womans coat four',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -59,12 +59,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
     gender: 'female'
   },
   {
     id: 105,
-    img: '../img/coat-female.png',
+    img: '../img/stitched/21-1043_1_.jpg',
     title: 'Womans coat five',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -74,12 +74,12 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
     gender: 'female'
   },
   {
     id: 106,
-    img: '../img/coat-female.png',
+    img: '../img/stitched/21-1059_1_.jpg',
     title: 'Womans coat six',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
@@ -89,7 +89,67 @@ export const productList = [
     amount: 0,
     total: 0,
     size: null,
-    category: 'women-coats',
+    category: 'stitched',
+    gender: 'female'
+  },
+  {
+    id: 107,
+    img: '../img/stitched/21-1614_1_.jpg',
+    title: 'Womans coat six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 440,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'stitched',
+    gender: 'female'
+  },
+  {
+    id: 108,
+    img: '../img/stitched/21-2504_1__1.jpg',
+    title: 'Womans coat six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 440,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'stitched',
+    gender: 'female'
+  },
+  {
+    id: 109,
+    img: '../img/stitched/jds-21-1042.jpg',
+    title: 'Womans coat six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 440,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'stitched',
+    gender: 'female'
+  },
+  {
+    id: 110,
+    img: '../img/stitched/jds-21-1071_1_.jpg',
+    title: 'Womans coat six',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quis deserunt. Aperiam minima facere dolorem saepe deleniti aspernatur amet molestiae doloremque, sed quam ullam cum veritatis corporis eius sequi magnam ipsum aliquid eum! Saepe dolorum debitis voluptate culpa veniam molestiae mollitia dignissimos velit reprehenderit voluptatibus numquam omnis aperiam, cum facere.',
+    price: 440,
+    inCart: false,
+    inWishlist: false,
+    amount: 0,
+    total: 0,
+    size: null,
+    category: 'stitched',
     gender: 'female'
   },
 
@@ -1651,6 +1711,6 @@ export const initProduct = {
   amount: 0,
   total: 0,
   size: null,
-  category: 'women-coats',
+  category: 'stitched',
   gender: 'female'
 };
