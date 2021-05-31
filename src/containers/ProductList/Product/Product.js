@@ -1,11 +1,8 @@
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-// import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import React, { Component } from 'react';
 import './Product.scss';
 import { Link } from 'react-router-dom';
@@ -13,7 +10,6 @@ import Divider from '@material-ui/core/Divider';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import { Box } from '@material-ui/core';
-import { shadows } from '@material-ui/system';
 const thumb = {
   display: 'inline-flex',
   borderRadius: 0,
@@ -23,6 +19,15 @@ const thumb = {
   width: '345',
   height: "auto",
   padding: 7,
+  boxSizing: 'border-box'
+};
+const thumb1 = {
+  display: 'inline-flex',
+  borderRadius: 0,
+  marginBottom: 5,
+  marginRight: 5,
+  width: '345',
+  height: "auto",
   boxSizing: 'border-box'
 };
 
@@ -78,22 +83,25 @@ class Product extends Component {
                 className="product-img"
                 onClick={() => this.props.showModal(id)}
                 ref={(img) => this.img = img}
+                style={thumb1}
               />
             </CardMedia>
+            <div>
             <CardContent style={{ height: 10 }}>
               {title}
               <br />
                 Price: {price}.00 $
                 <Divider />
             </CardContent>
-            <CardActions>
+            </div>
+            <div>
               <Link to={`/details/${id}`}>
                 <Button size="small" color="primary"
                   clicked={() => this.props.showDetails(id)}
                   btnType="mobile">Show Details
                 </Button>
               </Link>
-            </CardActions>
+                  </div>
           </CardActionArea>
         </Card>
       </Box>
