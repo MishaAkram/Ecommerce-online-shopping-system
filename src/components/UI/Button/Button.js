@@ -16,22 +16,19 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1)
   }
 }));
-const MyButton = ({ disabled, clicked, btnType, children }) => {
+const Button = ({ disabled, clicked, btnType, children }) => {
   const classes = useStyles();
   return (
-    <>
+    
       <button
         disabled={disabled}
         onClick={clicked}
         className={["btn", btnType].join(' ')}
-      >
+        style={{fontFamily: "ACourier New, monospace"}}>
         {children}
       </button>
-      {/* <Button variant="outlined" color="primary" href="#outlined-buttons" size="small" className={classes.margin}> */}
-        {/* Link */}
- {/* </Button> */}
-    </>
+    
   )
 }
 
-export default MyButton;
+export default Button;

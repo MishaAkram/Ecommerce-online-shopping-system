@@ -8,11 +8,15 @@ import WishlistItem from './WishlistItem/WishlistItem';
 import Button from '../../components/UI/Button/Button';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { clearWishlist } from './../../store/actions/productActions';
+import { Divider } from '@material-ui/core';
+
+const textStyle={ fontFamily: "ACourier New, monospace" }
+
 function Wishlist() {
   const wishlistItems = useSelector(state => state.products.wishlist)
   const dispatch = useDispatch()
   let list;
-  (wishlistItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' }}>You do not have any products on the list yet.</p> :
+  (wishlistItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' ,fontFamily: "ACourier New, monospace"}}>You do not have any products on the list yet.</p> :
     list = (
       <TransitionGroup component="ul" className="wishlist-list">
         {wishlistItems.map(item => (
@@ -26,11 +30,12 @@ function Wishlist() {
     <>
       <ScrollToTopOnMount />
       <div className="wishlist-container">
-        <h2 className="main-title">Wishlist</h2>
-        <p className="main-info">Lorem ipsum dolor adipiscing elit. Donec eleifend ligula neque, at faucibus metus trum sedru.</p>
+        <h2 className="main-title" style={textStyle}>My Wishlist</h2>
+        <Divider/>
+        <p className="main-info"></p>
         {list}
         {wishlistItems.length > 0 &&
-          <Button clicked={() => dispatch(clearWishlist())} btnType="dark">Clear Wishlist</Button>
+          <Button clicked={() => dispatch(clearWishlist())} btnType="dark" style={textStyle}>Clear Wishlist</Button>
         }
       </div>
     </>

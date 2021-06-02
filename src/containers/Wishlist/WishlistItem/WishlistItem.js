@@ -1,31 +1,51 @@
 import React from 'react';
 import './WishlistItem.scss';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from '../../../components/UI/Button/Button';
-import { showDetails, removeWishlistItem } from './../../../store/actions/productActions';
+import {removeWishlistItem } from './../../../store/actions/productActions';
+import { Divider } from '@material-ui/core';
+const thumb2 = {
+  display: 'inline-flex',
+  borderRadius: 0,
+  border: '3px solid #eaeaea',
+  marginBottom: 2,
+  marginRight: 2,
+  width: 385,
+  height: 500,
+  padding: 5,
+  boxSizing: 'border-box'
+};
+const textStyle={ fontFamily: "ACourier New, monospace" }
 
 const WishlistItem = ({ item }) => {
-  const { id, title, subtitle, img, description, price } = item
+  const { id, title, subtitle, img, description, price } = item;
   const dispatch = useDispatch();
+  const history =useHistory();
+  
   return (
     <li className="wishlist-item">
       <h3 className="wishlist-title">{title}</h3>
       <p className="wishlist-value">{subtitle}</p>
       <div className="wishlist-content">
         <div className="wishlist-img-wrapper">
-          <img src={img} alt="" className="wishlist-item-img" />
+          <img src={img} alt="" className="wishlist-item-img" style ={thumb2} />
         </div>
         <div className="wishlist-info">
-          <h3 className="wishlist-subtitle">Description:</h3>
-          <p className="wishlist-value">{description}</p>
-          <h3 className="wishlist-subtitle">Price: {price}.00 $</h3>
+          <h3 className="wishlist-subtitle" style={textStyle}>Description:</h3>
+          <p className="wishlist-value" style={textStyle}>{description}</p>
+          <h3 className="wishlist-subtitle" style={textStyle}>PKR {price}</h3>
+          <Divider/>
           <div className="btn-wrapper">
-            <Link to={`/details/${id}`}>
-              <Button clicked={(id) => dispatch(showDetails(id))}>Show Details</Button>
-            </Link>
-            <Button clicked={(id) => dispatch(removeWishlistItem(id))} btnType="dark">Remove</Button>
+                <Button
+                 clicked={() =>
+                  history.push({
+                    pathname: "/details/" + id,
+                    data: item
+                  })
+                  } style={textStyle}>Show Details</Button>
+            <Button clicked={(id) => dispatch(removeWishlistItem(id))} btnType="dark" style={textStyle}>Remove</Button>
           </div>
         </div>
       </div>

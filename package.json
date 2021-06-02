@@ -18,7 +18,8 @@
     "react-test-renderer": "^17.0.2",
     "react-transition-group": "^4.4.1",
     "redux": "^4.1.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "surge": "^0.23.0"
   },
   "scripts": {
     "start": "react-scripts start",

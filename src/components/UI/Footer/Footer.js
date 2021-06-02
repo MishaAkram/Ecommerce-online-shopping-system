@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+const textStyle={ fontFamily: "ACourier New, monospace" }
 
 const footer = () => (
   <div>
@@ -8,39 +9,39 @@ const footer = () => (
         <div className="container">
           <div className="support-wrapper">
             <div className="buy-from-us">
-              <h3>Buy from Us</h3>
+              <h4 style={textStyle}>Buy from Us</h4>
               <ul>
-                <li><a href="/">Women</a></li>
-                <li><a href="/">Accessories  </a></li>
+                <li><a href="/" style={textStyle}>Women</a></li>
+                <li><a href="/" style={textStyle}>Accessories  </a></li>
               </ul>
             </div>
             <div className="col-sm-6 col-md-3 item">
-              <h3>Online Shop</h3>
+              <h4 style={textStyle}>Online Shop</h4>
               <ul>
-                <li><a href="/">How to Buy</a></li>
-                <li><a href="/">Questions</a></li>
-                <li><a href="/">Sales</a></li>
-                <li><a href="/">Delivery cost</a></li>
-                <li><a href="/">Regulations</a></li>
+                <li><a href="/" style={textStyle}>How to Buy</a></li>
+                <li><a href="/" style={textStyle}>Questions</a></li>
+                <li><a href="/" style={textStyle}>Sales</a></li>
+                <li><a href="/" style={textStyle}>Delivery cost</a></li>
+                <li><a href="/" style={textStyle}>Regulations</a></li>
               </ul>
             </div>
             <div className="about-us col-sm-6 col-md-3 item">
-              <h4>About Us</h4>
+              <h4 style={textStyle}>About Us</h4>
               <ul>
-                <li><a href="/">Who We Are</a></li>
-                <li><a href="/">Work with Us</a></li>
-                <li><a href="/">Social Media</a></li>
-                <li><a href="/">Our Stores</a></li>
+                <li><a href="/" style={textStyle}>Who We Are</a></li>
+                <li><a href="/" style={textStyle}>Work with Us</a></li>
+                <li><a href="/" style={textStyle}>Social Media</a></li>
+                <li><a href="/" style={textStyle}>Our Stores</a></li>
               </ul>
             </div>
             <div className="support col-sm-6 col-md-3 item">
-              <h4>Support</h4>
+              <h4 style={textStyle}>Support</h4>
               <ul>
-                <li><a href="/">Contact</a></li>
-                <li><a href="/">Find Store</a></li>
-                <li><a href="/">Customer Service</a></li>
-                <li><a href="/">Privacy & Cookies</a></li>
-                <li><a href="/">Security</a></li>
+                <li><a href="/" style={textStyle}>Contact</a></li>
+                <li><a href="/" style={textStyle}>Find Store</a></li>
+                <li><a href="/" style={textStyle}>Customer Service</a></li>
+                <li><a href="/" style={textStyle}>Privacy & Cookies</a></li>
+                <li><a href="/" style={textStyle}>Security</a></li>
               </ul>
             </div>
           </div>
@@ -62,7 +63,7 @@ const footer = () => (
                     </i>
                     </a>
                     </div>
-        <p className="copyright">Company Name © 2021</p>
+        <p className="copyright" style={textStyle}>Company Name © 2021</p>
       </div>
     </footer>
   </div>
