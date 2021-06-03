@@ -79,7 +79,8 @@ function Cart() {
                       } />
                   </div>
                   <div className="cart-item-content">
-                    <h3 className="name"  style={{fontFamily: "ACourier New, monospace"}}>{title}</h3>
+                    <br/>
+                    <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{title}</h3>
                     <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>
                     <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Quantity:</p>
                     <div className="button-wrapper">

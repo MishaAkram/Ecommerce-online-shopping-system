@@ -8,6 +8,9 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Order from './Order/Order';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { fetchOrders } from './../../store/actions/orderActions';
+import { Divider } from '@material-ui/core';
+const textStyle={ fontFamily: "ACourier New, monospace" }
+
 function Orders() {
   const order = useSelector(state => state.order.orders)
   const loading = useSelector(state => state.order.loading)
@@ -23,7 +26,7 @@ function Orders() {
   let orders = <Spinner />;
   if (!loading) {
     (orders.length === 0)
-      ? orders = <p>You do not have any orders yet.</p>
+      ? orders = <p style={textStyle}>You do not have any orders yet.</p>
       : orders = order.map(order => (
         <Order key={order.id} products={order.products} price={order.price} />
       ))
@@ -33,8 +36,8 @@ function Orders() {
     <>
       <ScrollToTopOnMount />
       <div className="orders-container">
-        <h2 className="main-title">Your Orders</h2>
-        <p className="main-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula neque, at faucibus metus trum sedru.</p>
+        <h2 className="main-title" style={textStyle}>YOUR ORDERS</h2>
+        <Divider/>
         <ul className="order-list">
           {orders}
         </ul>
