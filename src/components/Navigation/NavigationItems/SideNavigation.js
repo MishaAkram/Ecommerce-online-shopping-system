@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { filterProducts } from '../../../store/actions';
 import '../Navigation.scss';
-
 import NavigationItem from './NavigationItem';
-
+import Card from '@material-ui/core/Card';
+import { Divider } from '@material-ui/core';
+const textStyle = { fontFamily: "ACourier New, monospace" }
 const femaleCategories = [
   {
     category: 'female',
@@ -24,7 +25,7 @@ const femaleCategories = [
     category: 'un-stitched',
     content: 'Unstitched Dresses',
   },
-  
+
   {
     category: 'accessories',
     content: 'Accessories',
@@ -56,13 +57,19 @@ const sideNavigation = ({ filterProducts, children }) => (
         const { category, linkType, content } = femaleCategory;
 
         return (
-          <NavigationItem
-            key={category}
-            clicked={() => filterProducts(category)}
-            linkType={linkType}
-            link={`/products/${category}`}>
-            {content}
-          </NavigationItem>
+          <Card >
+            <br />
+              <NavigationItem
+                key={category}
+                clicked={() => filterProducts(category)}
+                linkType={linkType}
+                link={`/products/${category}`}>
+            <p style={textStyle}>
+                {content}
+            </p>
+              </NavigationItem>
+              <Divider />
+          </Card>
         )
       })}
       {children}
