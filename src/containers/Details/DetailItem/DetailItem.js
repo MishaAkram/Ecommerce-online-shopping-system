@@ -19,7 +19,7 @@ const textStyle={ fontFamily: "ACourier New, monospace" }
 function DetailItem({ children,data }) {
   const detailProduct = useSelector(state => state.products.detailProduct)
   if (detailProduct === null) return <Redirect to="/" />;
-  const { title, subtitle, img, description, price, category, gender, code, previousPrice } = data ? data : detailProduct;
+  const { title, subtitle, img, description, price, category, maincategory, code, previousPrice } = data ? data : detailProduct;
   return (
     <li className="detail-item">
       <p className="detail-value">{subtitle}</p>
@@ -35,7 +35,7 @@ function DetailItem({ children,data }) {
           <h3 style={textStyle}>Description:</h3>
           <h6 style={{ fontSize: "12px" }}>{code}</h6>
           <h3 style={textStyle}>{category}</h3>
-          <h3 style={textStyle} className="detail-subtitle">{gender}</h3>
+          <h3 style={textStyle} className="detail-subtitle">{maincategory}</h3>
           <h3 style={textStyle} >PKR {price} <strike style={{ color: "red" }}>{" "}{previousPrice}{" "}</strike></h3>
           <Divider />
           {children}

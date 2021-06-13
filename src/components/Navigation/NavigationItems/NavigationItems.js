@@ -18,7 +18,7 @@ const navigationItems = ({ filterProducts, isAuth }) => (
       clicked={() => filterProducts('female')}
       link="/products/female" exact>Women</NavigationItem>
     <NavigationItem 
-    clicked={() => filterProducts('male')}
+    clicked={() => filterProducts('accessories')}
       link="/products/accessories"exact
       style={style}>Accessories</NavigationItem>
     <NavigationItem style={style} link="/contact" exact >Contact</NavigationItem>

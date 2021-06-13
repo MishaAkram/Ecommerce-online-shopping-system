@@ -20,8 +20,8 @@ const getItem = id => productList.find(item => item.id === id);
 
 const fliterProducts = (state, action) => {
   let tempProducts;
-  (action.category === 'female' || action.category === 'male')
-    ? tempProducts = state.productList.filter(item => item.gender === action.category)
+  (action.category === 'female' || action.category === 'accessories')
+    ? tempProducts = state.productList.filter(item => item.maincategory === action.category)
     : tempProducts = state.productList.filter(item => item.category === action.category);
 
   return {

@@ -15,7 +15,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 102,
@@ -30,7 +30,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 103,
@@ -45,7 +45,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 104,
@@ -60,7 +60,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 105,
@@ -75,7 +75,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 106,
@@ -90,7 +90,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 107,
@@ -105,7 +105,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 108,
@@ -120,7 +120,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 109,
@@ -135,7 +135,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 110,
@@ -150,7 +150,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
 
   // WOMEN JACKETS
@@ -167,7 +167,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 112,
@@ -182,7 +182,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 113,
@@ -197,7 +197,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 114,
@@ -212,7 +212,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 115,
@@ -227,7 +227,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 116,
@@ -242,7 +242,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 117,
@@ -257,7 +257,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 118,
@@ -272,7 +272,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 119,
@@ -287,7 +287,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 120,
@@ -302,7 +302,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 1200,
@@ -317,7 +317,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'un-stitched',
-    gender: 'female'
+    maincategory: 'female'
   },
 
   // WOMEN KURTIS
@@ -334,7 +334,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 132,
@@ -349,7 +349,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 133,
@@ -364,7 +364,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 134,
@@ -379,7 +379,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 135,
@@ -394,7 +394,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 136,
@@ -409,7 +409,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 137,
@@ -424,7 +424,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 138,
@@ -439,7 +439,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 139,
@@ -454,7 +454,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 140,
@@ -469,7 +469,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 1040,
@@ -484,7 +484,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 10040,
@@ -499,7 +499,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
   {
     id: 136,
@@ -514,7 +514,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'kurtis',
-    gender: 'female'
+    maincategory: 'female'
   },
 
   // BRACELETS
@@ -531,7 +531,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 202,
@@ -546,7 +546,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 203,
@@ -561,7 +561,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 204,
@@ -576,7 +576,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 205,
@@ -591,7 +591,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 206,
@@ -606,7 +606,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'bracelets',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   // FOOTWARE
@@ -623,7 +623,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 222,
@@ -638,7 +638,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 223,
@@ -653,7 +653,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 224,
@@ -668,7 +668,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 225,
@@ -683,7 +683,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 226,
@@ -698,7 +698,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 227,
@@ -713,7 +713,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   {
@@ -729,7 +729,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   {
@@ -745,7 +745,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   {
@@ -761,7 +761,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   {
@@ -777,7 +777,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'footware',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   // EARINGS
@@ -794,7 +794,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 232,
@@ -809,7 +809,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 233,
@@ -824,7 +824,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 234,
@@ -839,7 +839,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 235,
@@ -854,7 +854,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 236,
@@ -869,7 +869,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 237,
@@ -884,7 +884,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 238,
@@ -899,7 +899,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 239,
@@ -914,7 +914,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 240,
@@ -929,7 +929,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 2040,
@@ -944,7 +944,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'earings',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 
   // STOLES
@@ -961,7 +961,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 252,
@@ -976,7 +976,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 253,
@@ -991,7 +991,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 254,
@@ -1006,7 +1006,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 255,
@@ -1021,7 +1021,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 256,
@@ -1036,7 +1036,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 257,
@@ -1051,7 +1051,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 258,
@@ -1066,7 +1066,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 259,
@@ -1081,7 +1081,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 260,
@@ -1096,7 +1096,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 2060,
@@ -1111,7 +1111,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
   {
     id: 20060,
@@ -1126,7 +1126,7 @@ export const productList = [
     total: 0,
     size: null,
     category: 'stoles',
-    gender: 'male'
+    maincategory: 'accessories'
   },
 ]
 
@@ -1143,5 +1143,5 @@ export const initProduct = {
   total: 0,
   size: null,
   category: 'stitched',
-  gender: 'female'
+  maincategory: 'female'
 };
