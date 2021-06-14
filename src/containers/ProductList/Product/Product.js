@@ -90,7 +90,7 @@ class Product extends Component {
             <CardContent style={{ height: 10 }}>
               {title}
               <br />
-                Price: {price}.00 $
+                Price: PKR {price}.00 
                 <Divider />
             </CardContent>
             </div>
