@@ -9,7 +9,7 @@ import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { openModal, closeModal } from './../../store/actions/interfaceActions';
 import { addToCart, addToWishlist } from './../../store/actions/productActions'
 import { PropTypes } from 'prop-types';
-import  Card  from '@material-ui/core/Card';
+import Card from '@material-ui/core/Card';
 function Details(props) {
   const style = {
     margin: 0,
@@ -44,9 +44,9 @@ function Details(props) {
   const data = props.location.data
 
   const handleAddToCart = () => {
-    detailProduct.maincategory=="female"?(value === '') ?
+    detailProduct.maincategory == "female" ? (value === '') ?
       dispatch(openModal()) :
-      dispatch(addToCart(detailProduct.id, value)):dispatch(addToCart(detailProduct.id,value))
+      dispatch(addToCart(detailProduct.id, value)) : dispatch(addToCart(detailProduct.id, value))
   };
   if (!detailProduct) return <Redirect to="/" />
 
@@ -64,77 +64,79 @@ function Details(props) {
       <ul className="details-container">
         <Card>
 
-        <DetailItem data={data}>
-          <p className="detail-subtitle" style={textStyle}>Select Size:</p>
-          {detailProduct.maincategory =="female"&&
-          <div className="switch-field">
-            <input
-              type="radio"
-              id="switch_s"
-              name="switch_5"
-              value="S"
-              checked={value === 'S'}
-              onChange={(e) => setValue(e.target.value)}
-              />
-            <label htmlFor="switch_s">S</label>
-            <input
-              type="radio"
-              id="switch_m"
-              name="switch_5"
-              value="M"
-              checked={value === 'M'}
-              onChange={(e) => setValue(e.target.value)}
-              />
-            <label htmlFor="switch_m">M</label>
-            <input
-              type="radio"
-              id="switch_l"
-              name="switch_5"
-              value="L"
-              checked={value === 'L'}
-              onChange={(e) => setValue(e.target.value)}
-              />
-            <label htmlFor="switch_l">L</label>
-            <input
-              type="radio"
-              id="switch_xl"
-              name="switch_5"
-              value="XL"
-              checked={value === 'XL'}
-              onChange={(e) => setValue(e.target.value)}
-              />
-            <label htmlFor="switch_xl">XL</label>
-            <input
-              type="radio"
-              id="switch_xxl"
-              name="switch_5"
-              value="XXL"
-              checked={value === 'XXL'}
-              onChange={(e) => setValue(e.target.value)}
-              />
-            <label htmlFor="switch_xxl">XXL</label>
-          </div>}
-          <div className="button-wrapper">
-            <button style={style}
-              onClick={() => handleAddToCart()}
-              disabled={detailProduct.inCart ? true : false}>
-              {detailProduct.inCart ?
-                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20 ,fontWeight:600}}>In Cart</p>) :
-                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20 ,fontWeight:600}}>Add to Cart</p>)
-              }
-            </button>
+          <DetailItem data={data}>
+            {detailProduct.maincategory == "female" &&
+              <>
+                <p className="detail-subtitle" style={textStyle}>Select Size:</p>
+                <div className="switch-field">
+                  <input
+                    type="radio"
+                    id="switch_s"
+                    name="switch_5"
+                    value="S"
+                    checked={value === 'S'}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
+                  <label htmlFor="switch_s">S</label>
+                  <input
+                    type="radio"
+                    id="switch_m"
+                    name="switch_5"
+                    value="M"
+                    checked={value === 'M'}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
+                  <label htmlFor="switch_m">M</label>
+                  <input
+                    type="radio"
+                    id="switch_l"
+                    name="switch_5"
+                    value="L"
+                    checked={value === 'L'}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
+                  <label htmlFor="switch_l">L</label>
+                  <input
+                    type="radio"
+                    id="switch_xl"
+                    name="switch_5"
+                    value="XL"
+                    checked={value === 'XL'}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
+                  <label htmlFor="switch_xl">XL</label>
+                  <input
+                    type="radio"
+                    id="switch_xxl"
+                    name="switch_5"
+                    value="XXL"
+                    checked={value === 'XXL'}
+                    onChange={(e) => setValue(e.target.value)}
+                  />
+                  <label htmlFor="switch_xxl">XXL</label>
+                </div>
+              </>}
+            <div className="button-wrapper">
+              <button style={style}
+                onClick={() => handleAddToCart()}
+                disabled={detailProduct.inCart ? true : false}>
+                {detailProduct.inCart ?
+                  (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20, fontWeight: 600 }}>In Cart</p>) :
+                  (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 20, fontWeight: 600 }}>Add to Cart</p>)
+                }
+              </button>
 
-            <Button
-              clicked={() => dispatch(addToWishlist(detailProduct.id))}
-              disabled={detailProduct.inWishlist ? true : false}>
-              {detailProduct.inWishlist ?
-                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14 ,fontWeight:200}}>In Wishlist</p>) :
-                (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14 ,fontWeight:200}}>Add to Wishlist</p>)
-              }
-            </Button>
-          </div>
-        </DetailItem>
-              </Card>
+              <Button
+                clicked={() => dispatch(addToWishlist(detailProduct.id))}
+                disabled={detailProduct.inWishlist ? true : false}>
+                {detailProduct.inWishlist ?
+                  (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14, fontWeight: 200 }}>In Wishlist</p>) :
+                  (<p style={{ fontFamily: "ACourier New, monospace", fontSize: 14, fontWeight: 200 }}>Add to Wishlist</p>)
+                }
+              </Button>
+            </div>
+          </DetailItem>
+        </Card>
       </ul>
     </>
   )

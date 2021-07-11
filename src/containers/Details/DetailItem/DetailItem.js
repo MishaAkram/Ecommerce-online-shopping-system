@@ -15,14 +15,14 @@ const thumb2 = {
   padding: 5,
   boxSizing: 'border-box'
 };
-const textStyle={ fontFamily: "ACourier New, monospace" }
-function DetailItem({ children,data }) {
+const textStyle = { fontFamily: "ACourier New, monospace" }
+function DetailItem({ children, data }) {
   const detailProduct = useSelector(state => state.products.detailProduct)
   if (detailProduct === null) return <Redirect to="/" />;
   const { title, subtitle, img, description, price, category, maincategory, code, previousPrice } = data ? data : detailProduct;
   return (
     <li className="detail-item">
-            
+
       <h3 className="text-uppercase font-weight-bold" >{subtitle}</h3>
       <div className="detail-content ">
         <div className="detail-img-wrapper">

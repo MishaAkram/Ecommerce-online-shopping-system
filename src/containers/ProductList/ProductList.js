@@ -9,14 +9,14 @@ import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { closeModal, handleCheckboxValue, handleDirection, sortProducts, openModal, showDetails } from '../../store/actions';
-const textStyle={ fontFamily: "ACourier New, monospace" }
+const textStyle = { fontFamily: "ACourier New, monospace" }
 
 function ProductList() {
   const products = useSelector(state => state.products.products)
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const modalProduct = useSelector(state => state.interface.modalProduct)
   const checkboxValue = useSelector(state => state.products.sortCheckboxValue)
-  const {title, img, subtitle, price, id } = modalProduct;
+  const { title, img, subtitle, price, id, maincategory } = modalProduct;
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -47,7 +47,7 @@ function ProductList() {
           <h3 className="modal-title" style={textStyle}>Info:</h3>
           <p className="modal-subtitle" style={textStyle}>{subtitle}</p>
           <h3 className="modal-title" style={textStyle}>Price: PKR {price}.00</h3>
-          <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>
+          {maincategory == "female" && <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>}
           <div className="btn-wrapper">
             <Link to={`/details/${id}`}>
               <Button clicked={() => showDetailsByModal()}>Show Details</Button>
