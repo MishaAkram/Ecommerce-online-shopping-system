@@ -34,12 +34,11 @@ export const purchaseInit = () => {
 export const purchaseOrder = (orderData) => {
   return dispatch => {
     dispatch(purchaseOrderStart());
-
     axios.post('/orders.json', orderData)
       .then(res => {
+        console.log("res",res)
         dispatch(purchaseOrderSuccess(res.data.name, orderData));
         dispatch(actions.clearCart());
-        console.log("res",res)
       })
       .catch(err => {
         dispatch(purchaseOrderFail(err));

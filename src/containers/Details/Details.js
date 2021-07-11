@@ -114,16 +114,6 @@ function Details(props) {
               />
             <label htmlFor="switch_xxl">XXL</label>
           </div>}
-          {detailProduct.maincategory=="accessories" && 
-          <div style={{display:'none'}}>
-            <input
-             type="radio"
-             id="switch_xxl"
-             name="switch_5"
-             value="_"
-             checked={value === '_'}
-             onChange={(e) => setValue("_")}
-             /></div>}
           <div className="button-wrapper">
             <button style={style}
               onClick={() => handleAddToCart()}

@@ -42,7 +42,8 @@ function Cart() {
   const purchased = useSelector(state => state.order.purchased)
   const isAuth = useSelector(state => state.auth.token !== null)
   const dispatch = useDispatch();
-
+  console.log("cartitem")
+  console.log(cartItems)
   useEffect(() => {
     dispatch(calculateOrder());
   })
@@ -61,7 +62,7 @@ function Cart() {
     list = (
       <TransitionGroup component="ul" className="cart-list">
         {cartItems.map(item => {
-          const { id, img, title, size, price, total, amount } = item;
+          const { id, img, title, size, price, total, amount ,maincategory} = item;
           return (
             <CSSTransition key={id} classNames="fade" timeout={300}>
               <li >
@@ -81,7 +82,8 @@ function Cart() {
                   <div className="cart-item-content">
                     <br/>
                     <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{title}</h3>
-                    <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>
+                    <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{maincategory}</h3>
+                   {maincategory=="female"&& <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>}
                     <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Quantity:</p>
                     <div className="button-wrapper">
                       <button disabled={amount === 1} onClick={() => dispatch(handleProductAmount(id, 'decrement'))} className="size">-</button>

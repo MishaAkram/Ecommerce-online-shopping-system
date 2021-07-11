@@ -54,6 +54,7 @@ function ContactForm() {
       formData[formElementIndentifier] = orderForm[formElementIndentifier].value
     }
     const order = { products: cartItems, price: price, orderData: formData, userId: userId };
+    console.log(order)
     dispatch(purchaseOrder(order));
   };
 

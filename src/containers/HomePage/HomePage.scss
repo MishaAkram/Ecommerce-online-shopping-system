@@ -2,7 +2,7 @@
 
 .home-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
 
   .showcase {
     padding: 0 0.5em;
@@ -10,7 +10,7 @@
 
   .sale {
     height: 350px;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     color: #fff;
     padding: 1em;
@@ -30,7 +30,7 @@ $totalAnimationTime: 20s;
   width: 100%;
   height: 350px;
   overflow: hidden;
-  position: relative;
+  position:relative;
 
   @include mediaMd {
     height: calc(400px + 16vw);
