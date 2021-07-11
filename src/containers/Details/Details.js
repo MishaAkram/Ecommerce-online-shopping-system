@@ -40,12 +40,13 @@ function Details(props) {
   const dispatch = useDispatch();
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const detailProduct = useSelector(state => state.products.detailProduct)
+  console.log(detailProduct)
   const data = props.location.data
 
   const handleAddToCart = () => {
-    (value === '') ?
+    detailProduct.maincategory=="female"?(value === '') ?
       dispatch(openModal()) :
-      dispatch(addToCart(detailProduct.id, value));
+      dispatch(addToCart(detailProduct.id, value)):dispatch(addToCart(detailProduct.id,value))
   };
   if (!detailProduct) return <Redirect to="/" />
 
@@ -65,6 +66,7 @@ function Details(props) {
 
         <DetailItem data={data}>
           <p className="detail-subtitle" style={textStyle}>Select Size:</p>
+          {detailProduct.maincategory =="female"&&
           <div className="switch-field">
             <input
               type="radio"
@@ -111,7 +113,17 @@ function Details(props) {
               onChange={(e) => setValue(e.target.value)}
               />
             <label htmlFor="switch_xxl">XXL</label>
-          </div>
+          </div>}
+          {detailProduct.maincategory=="accessories" && 
+          <div style={{display:'none'}}>
+            <input
+             type="radio"
+             id="switch_xxl"
+             name="switch_5"
+             value="_"
+             checked={value === '_'}
+             onChange={(e) => setValue("_")}
+             /></div>}
           <div className="button-wrapper">
             <button style={style}
               onClick={() => handleAddToCart()}
