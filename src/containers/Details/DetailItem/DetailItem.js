@@ -22,17 +22,18 @@ function DetailItem({ children,data }) {
   const { title, subtitle, img, description, price, category, maincategory, code, previousPrice } = data ? data : detailProduct;
   return (
     <li className="detail-item">
-      <p className="detail-value">{subtitle}</p>
-      <div className="detail-content">
+            
+      <h3 className="text-uppercase font-weight-bold" >{subtitle}</h3>
+      <div className="detail-content ">
         <div className="detail-img-wrapper">
           <img src={img} alt="" className="detail-item-img" style={thumb2} />
         </div>
         <div className="detail-info">
           <h3 className="detail-title">{title}</h3>
-          <h2 className="text-uppercase font-weight-bold"
-            style={textStyle}
-          >{description}</h2>
           <h3 style={textStyle}>Description:</h3>
+          <h4 className="text-uppercase font-weight-bold"
+            style={textStyle}
+          >{description}</h4>
           <h6 style={{ fontSize: "12px" }}>{code}</h6>
           <h3 style={textStyle}>{category}</h3>
           <h3 style={textStyle} className="detail-subtitle">{maincategory}</h3>

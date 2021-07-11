@@ -9,6 +9,7 @@ import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { openModal, closeModal } from './../../store/actions/interfaceActions';
 import { addToCart, addToWishlist } from './../../store/actions/productActions'
 import { PropTypes } from 'prop-types';
+import  Card  from '@material-ui/core/Card';
 function Details(props) {
   const style = {
     margin: 0,
@@ -60,6 +61,8 @@ function Details(props) {
         <Button clicked={() => dispatch(closeModal())} btnType="dark" style={textStyle} >Got it</Button>
       </Modal>
       <ul className="details-container">
+        <Card>
+
         <DetailItem data={data}>
           <p className="detail-subtitle" style={textStyle}>Select Size:</p>
           <div className="switch-field">
@@ -70,7 +73,7 @@ function Details(props) {
               value="S"
               checked={value === 'S'}
               onChange={(e) => setValue(e.target.value)}
-            />
+              />
             <label htmlFor="switch_s">S</label>
             <input
               type="radio"
@@ -79,7 +82,7 @@ function Details(props) {
               value="M"
               checked={value === 'M'}
               onChange={(e) => setValue(e.target.value)}
-            />
+              />
             <label htmlFor="switch_m">M</label>
             <input
               type="radio"
@@ -88,7 +91,7 @@ function Details(props) {
               value="L"
               checked={value === 'L'}
               onChange={(e) => setValue(e.target.value)}
-            />
+              />
             <label htmlFor="switch_l">L</label>
             <input
               type="radio"
@@ -97,7 +100,7 @@ function Details(props) {
               value="XL"
               checked={value === 'XL'}
               onChange={(e) => setValue(e.target.value)}
-            />
+              />
             <label htmlFor="switch_xl">XL</label>
             <input
               type="radio"
@@ -106,7 +109,7 @@ function Details(props) {
               value="XXL"
               checked={value === 'XXL'}
               onChange={(e) => setValue(e.target.value)}
-            />
+              />
             <label htmlFor="switch_xxl">XXL</label>
           </div>
           <div className="button-wrapper">
@@ -129,6 +132,7 @@ function Details(props) {
             </Button>
           </div>
         </DetailItem>
+              </Card>
       </ul>
     </>
   )

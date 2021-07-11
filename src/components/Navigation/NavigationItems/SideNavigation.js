@@ -59,16 +59,16 @@ const sideNavigation = ({ filterProducts, children }) => (
         return (
           <Card >
             <br />
-              <NavigationItem
-                key={category}
-                clicked={() => filterProducts(category)}
-                linkType={linkType}
-                link={`/products/${category}`}>
-            <p style={textStyle}>
+            <NavigationItem
+              key={category}
+              clicked={() => filterProducts(category)}
+              linkType={linkType}
+              link={`/products/${category}`}>
+              <p style={textStyle}>
                 {content}
-            </p>
-              </NavigationItem>
-              <Divider />
+              </p>
+            </NavigationItem>
+            <Divider />
           </Card>
         )
       })}
