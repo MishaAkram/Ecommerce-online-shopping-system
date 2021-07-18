@@ -10,6 +10,25 @@ clothes is intended to provide complete solutions for customers through a single
 shop and purchase them online without having to visit the shop physically.
 Ecommerce online shopping web based app with frontend implemented using React, backend and database using firebase realtime database and hosting on surge
 
+# DEPLOYMENT
+This app is hosted on surge.sh and can be accessed by entering the  following URL in Your Browser Installed On Your Pc
+```
+http://onlineshoppingstore.surge.sh/
+
+
+```
+# USER INTERFACES
+- Home Screen This is the main navigation page. In this screen, page
+shows a menubar. Each button will redirect the user to a new link to
+pages of dresses, accessories, and login.
+ - Dresses Screen: In this screen user can see a number of dresses and can
+add them to cart.
+-  Accessories Screen: In this screen user can see a number of accessories
+and can add them to cart.
+-  Login: User can login using credentials.
+ - Cart: It shows a list of selected items user can also delete items from
+their cart.
+ - Checkout: Here user enter respective details for checkout.
 # DEVELOPMENT TOOLS
 
 - Web app developed on Visual studio code with React, Javascript.
