@@ -45,7 +45,7 @@ const WishlistItem = ({ item }) => {
                     data: item
                   })
                   } style={textStyle}>Show Details</Button>
-            <Button clicked={(id) => dispatch(removeWishlistItem(id))} btnType="dark" style={textStyle}>Remove</Button>
+            <Button clicked={() => dispatch(removeWishlistItem(id))} btnType="dark" style={textStyle}>Remove</Button>
           </div>
         </div>
       </div>

@@ -10,26 +10,6 @@ import Divider from '@material-ui/core/Divider';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import { Box } from '@material-ui/core';
-const thumb = {
-  display: 'inline-flex',
-  borderRadius: 0,
-  border: '3px solid #eaeaea',
-  marginBottom: 5,
-  marginRight: 5,
-  width: '345',
-  height: "auto",
-  padding: 7,
-  boxSizing: 'border-box'
-};
-const thumb1 = {
-  display: 'inline-flex',
-  borderRadius: 0,
-  marginBottom: 5,
-  marginRight: 5,
-  width: '345',
-  height: "auto",
-  boxSizing: 'border-box'
-};
 
 class Product extends Component {
   state = {
@@ -67,13 +47,20 @@ class Product extends Component {
 
   render() {
     const { id, img, price, title } = this.props.product;
-
     return (
-      <Box className="product"
-     
-      >
-        <Card style={thumb} className="product"
-         boxshadow={3}>
+      <Box className="product">
+        <Card style={{
+          width: 325,
+          height: 500,
+          border: '3px solid #eaeaea',
+          borderRadius: 0,
+          marginBottom: 5,
+          padding: 7,
+          marginRight: 5,
+          display: 'cover'
+        }}
+          className="product"
+          boxshadow={3}>
           <CardActionArea>
             <CardMedia className="img-wrapper">
               {!this.state.isLoaded && <Spinner />}
@@ -83,16 +70,25 @@ class Product extends Component {
                 className="product-img"
                 onClick={() => this.props.showModal(id)}
                 ref={(img) => this.img = img}
-                style={thumb1}
+                style={{
+                  width: 'auto',
+                  height: "auto",
+                  maxHeight: 400,
+                  maxWidth: 350,
+                  borderRadius: 0,
+                  marginBottom: 5,
+                  marginRight: 5,
+                  display: 'cover',
+                }}
               />
             </CardMedia>
             <div>
-            <CardContent style={{ height: 10 }}>
-              {title}
-              <br />
-                Price: PKR {price}.00 
+              <CardContent style={{ height: 10 }}>
+                {title}
+                <br />
+                Price: PKR {price}.00
                 <Divider />
-            </CardContent>
+              </CardContent>
             </div>
             <div>
               <Link to={`/details/${id}`}>
@@ -101,7 +97,7 @@ class Product extends Component {
                   btnType="mobile">Show Details
                 </Button>
               </Link>
-                  </div>
+            </div>
           </CardActionArea>
         </Card>
       </Box>
