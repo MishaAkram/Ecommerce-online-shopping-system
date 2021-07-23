@@ -25,9 +25,6 @@ const contact = () => (
         <p>
           <strong style={{ fontFamily: "ACourier New, monospace" }}>BY EMAIL</strong>
           <br />
-          <a href="mailto:eshop@junaidjamshed.com">
-            <span style={{ fontSize: "small", fontFamily: "ACourier New, monospace" }}>eshop@junaidjamshed.com</span>
-          </a>
         </p>
         <p>
           <strong style={{ fontFamily: "ACourier New, monospace" }}>BY TELEPHONE</strong>

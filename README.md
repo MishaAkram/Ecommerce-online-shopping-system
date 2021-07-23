@@ -27,6 +27,14 @@ and can add them to cart.
  - Cart: It shows a list of selected items user can also delete items from
 their cart.
  - Checkout: Here user enter respective details for checkout.
+
+
+# RELEVANT DOCUMENTS
+ [Software Requirement Specifications Document](../blob/main/SRS_SDT.pdf)
+
+ [Testing Document](../blob/main/Elegant%20Testing%20Document%20(2).pdf)
+
+ [Deployment Document](../blob/main/DEPLOYMENT%20DOCUMENT.pdf)
 # DEVELOPMENT TOOLS
 
 - Web app developed on Visual studio code with React, Javascript.
