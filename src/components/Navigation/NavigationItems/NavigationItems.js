@@ -5,23 +5,23 @@ import { filterProducts } from '../../../store/actions';
 
 import NavigationItem from './NavigationItem';
 
-const style={
+const style = {
   fontWeight: "450",
-    fontSize: "1.1em",
-    marginBottom: ".3em",
-    fontFamily: "ACourier New, monospace"
+  fontSize: "1.1em",
+  marginBottom: ".3em",
+  fontFamily: "ACourier New, monospace"
 }
 const navigationItems = ({ filterProducts, isAuth }) => (
   <ul className="nav-list">
     <NavigationItem
-    style={style}
+      style={style}
       clicked={() => filterProducts('female')}
       link="/products/female" exact>Women</NavigationItem>
-    <NavigationItem 
-    clicked={() => filterProducts('accessories')}
-      link="/products/accessories"exact
+    <NavigationItem
+      clicked={() => filterProducts('accessories')}
+      link="/products/accessories" exact
       style={style}>Accessories</NavigationItem>
-    <NavigationItem style={style} link="/contact" exact >Contact</NavigationItem>
+    <NavigationItem style={style} link="/contact-us" exact >Contact Us</NavigationItem>
     <NavigationItem style={style} link="/" exact>Home</NavigationItem>
     {isAuth ? <NavigationItem style={style} link="/orders" exact>Orders</NavigationItem> : null}
   </ul>

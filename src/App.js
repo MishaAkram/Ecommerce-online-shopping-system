@@ -11,6 +11,7 @@ import Wishlist from './containers/Wishlist/Wishlist';
 import Contact from './containers/Contact/Contact';
 import Logout from './containers/Auth/Logout/Logout';
 import {authCheckState} from './store/actions/authActions'
+import AboutUs from './containers/AboutUs/AboutUs';
 
 function App() {
   const isAuth = useSelector(state => state.auth.token !== null)
@@ -24,6 +25,7 @@ function App() {
   const asyncAuth = asyncComponent(() => {
     return import('./containers/Auth/Auth');
   });
+
   return (
     <div>
       <Fragment>
@@ -33,7 +35,8 @@ function App() {
             {isAuth && <Route path="/orders" component={asyncOrders} />}
             {isAuth && <Route path="/logout" component={Logout} />}
             <Route path="/wishlist" component={Wishlist} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/contact-us" component={Contact} />
+            <Route path="/about-us" component={AboutUs} />
             <Route path="/products/:type" component={ProductList} />
             <Route path="/details/:id" component={Details} />
             <Route path="/cart" component={Cart} />

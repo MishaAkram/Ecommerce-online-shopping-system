@@ -2,7 +2,6 @@ import React from 'react';
 import './Footer.scss';
 import { connect } from 'react-redux';
 import { filterProducts } from './../../../store/actions/productActions';
-import NavigationItem from './../../Navigation/NavigationItems/NavigationItem';
 import { Link } from 'react-router-dom';
 const textStyle = { fontFamily: "ACourier New, monospace" }
 const footer = ({ filterProducts }) => (
@@ -41,7 +40,7 @@ const footer = ({ filterProducts }) => (
             <div className="about-us col-sm-6 col-md-3 item">
               <h4 style={textStyle}>About Us</h4>
               <ul>
-                <li><a href="/" style={textStyle}>Who We Are</a></li>
+                <li><Link link to="/about-us" style={textStyle}>Who We Are</Link></li>
                 <li><a href="/" style={textStyle}>Work with Us</a></li>
                 <li><a href="/" style={textStyle}>Social Media</a></li>
                 <li><a href="/" style={textStyle}>Our Stores</a></li>
@@ -50,7 +49,7 @@ const footer = ({ filterProducts }) => (
             <div className="support col-sm-6 col-md-3 item">
               <h4 style={textStyle}>Support</h4>
               <ul>
-                <li><a href="/contact" style={textStyle}>Contact</a></li>
+                <li><a href="/contact-us" style={textStyle}>Contact Us</a></li>
                 <li><a href="/" style={textStyle}>Find Store</a></li>
                 <li><a href="/" style={textStyle}>Customer Service</a></li>
                 <li><a href="/" style={textStyle}>Privacy & Cookies</a></li>

@@ -2,11 +2,12 @@ import React from 'react';
 import './Contact.scss';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { Divider } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 const contact = () => (
   <>
     <ScrollToTopOnMount />
     <div className="contact-container">
-      <h2 className="main-title" style={{ fontFamily: "ACourier New, monospace" }}>Contact</h2>
+      <h2 className="main-title" style={{ fontFamily: "ACourier New, monospace" }}>Contact Us</h2>
       <Divider/>
       <p className="main-info"></p>
       <h3 className="title" style={{ fontFamily: "ACourier New, monospace" }}>Phone number:</h3>
@@ -56,8 +57,11 @@ const contact = () => (
                 <br />
                 <span style={{ fontSize: "small" }}>Corporate@elegantStore.com</span>
               </p>
-              <style>
-              </style>
+              <strong style={{ fontFamily: "ACourier New, monospace" }}>ABOUT US</strong>
+              <p>
+               <Link link to="/about-us">About us</Link>
+
+              </p>
         </div>
         </div>
   </>
