@@ -17,6 +17,7 @@ http://onlineshoppingstore.surge.sh/
 - **Details Screen:** User can view details of any item present in the product list, add item to cart or wishlist. 
 - **Login:** User can login using credentials for procceding with their orders.
 - **Cart:** It shows a list of selected items, user can increment or decrement quantity also delete items from their cart.
+- **Wishlist:** It shows a list of selected items, that the user may buy in future, user can add it to their cart, view its detail or  remove it from wishlist.
 - **Checkout:** Here user enter respective details for checkout.
 
 
@@ -28,6 +29,9 @@ Following are the required documents for the project.
  [Testing Document](../main/Elegant%20Testing%20Document%20(2).pdf)
 
  [Deployment Document](../main/DEPLOYMENT%20DOCUMENT.pdf)
+
+ [Design Document](../main/DESIGN%20DOCUMENT.pdf)
+
 ## DEVELOPMENT TOOLS
 
 - Web app developed on Visual studio code with React, Javascript.
