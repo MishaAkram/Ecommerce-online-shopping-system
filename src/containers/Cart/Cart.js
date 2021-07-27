@@ -58,7 +58,12 @@ function Cart() {
 
 
   let list;
-  (cartItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500', fontFamily: "ACourier New, monospace" }}>You do not have any products on the list yet.</p> :
+  (cartItems.length === 0) ?
+    list = <p className="main-info"
+      style={{ marginTop: '20px', fontWeight: '500', fontFamily: "ACourier New, monospace" }}
+    >You do not have any products on the list yet.
+      <div style={{ margin: "230px" }}/>
+    </p> :
     list = (
       <TransitionGroup component="ul" className="cart-list">
         {cartItems.map(item => {
@@ -83,7 +88,7 @@ function Cart() {
                     <br />
                     <h3 className="name" style={{ fontFamily: "ACourier New, monospace", fontWeight: 600 }}>{title}</h3>
                     <h3 className="name" style={{ fontFamily: "ACourier New, monospace", fontWeight: 600 }}>{maincategory}</h3>
-                    {((maincategory === "female" && category !=="un-stitched") || (maincategory==='accessories' && category ==='footware') ) && <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Size: {size}</p>}
+                    {((maincategory === "female" && category !== "un-stitched") || (maincategory === 'accessories' && category === 'footware')) && <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Size: {size}</p>}
                     <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Quantity:</p>
                     <div className="button-wrapper">
                       <button disabled={amount === 1} onClick={() => dispatch(handleProductAmount(id, 'decrement'))} className="size">-</button>

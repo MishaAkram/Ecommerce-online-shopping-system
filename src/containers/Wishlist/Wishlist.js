@@ -16,7 +16,10 @@ function Wishlist() {
   const wishlistItems = useSelector(state => state.products.wishlist)
   const dispatch = useDispatch()
   let list;
-  (wishlistItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' ,fontFamily: "ACourier New, monospace"}}>You do not have any products on the list yet.</p> :
+  (wishlistItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' ,fontFamily: "ACourier New, monospace"}}>You do not have any products on the list yet.
+   <div class="cellContainer">
+    <div style={{margin: "250px"}}/>
+  </div></p> :
     list = (
       <TransitionGroup component="ul" className="wishlist-list">
         {wishlistItems.map(item => (

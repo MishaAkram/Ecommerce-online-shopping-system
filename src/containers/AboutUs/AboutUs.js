@@ -29,6 +29,7 @@ const AboutUs = () => {
             but also caters to various customer needs by offering a diverse product mix. This leads to a complete and enjoyable retail
             experience. We don’t just aim at setting trends, but believe in mastering them.
         </div>
+        <div style={{ margin: "50px" }}/>
         </>
     )
 }

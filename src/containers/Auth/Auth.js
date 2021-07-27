@@ -122,6 +122,8 @@ function Auth() {
           {form}
           <Button>Submit</Button>
         </form>
+        <div style={{ margin: "50px" }}></div>
+
       </div>
     </>
   );
