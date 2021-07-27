@@ -23,9 +23,9 @@ function Orders() {
   if (loading) {
     <Spinner />
   }
-  let orders = <Spinner />;
+  var orders = <Spinner />;
   if (!loading) {
-    (orders.length === 0)
+    (order.length === 0)
       ? orders = <p style={textStyle}>You do not have any orders yet.</p>
       : orders = order.map(order => (
         <Order key={order.id} products={order.products} price={order.price} />

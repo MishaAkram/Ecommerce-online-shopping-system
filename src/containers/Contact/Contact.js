@@ -32,7 +32,7 @@ const contact = () => (
           <br />
           <span style={{ fontSize: "small", fontFamily: "ACourier New, monospace" }}>
             <span style={{ color: "#0000ff", fontFamily: "ACourier New, monospace" }}>
-              <a href="">
+              <a href="/">
                 <span style={{ color: "#0000ff", fontFamily: "ACourier New, monospace" }}>021 111 112 111</span>
               </a>
             </span> (9am - 10pm , Monday - Saturday, Sunday 11am - 08pm )</span>
@@ -43,7 +43,7 @@ const contact = () => (
           <br />
           <span style={{ fontSize: "small", fontFamily: "ACourier New, monospace" }}>
             <span style={{ color: "#0000ff", fontFamily: "ACourier New, monospace" }}>
-              <a href="">
+              <a href="/">
                 <span style={{ color: "#0000ff" }}>021 111 112 111</span>
               </a>
               </span>

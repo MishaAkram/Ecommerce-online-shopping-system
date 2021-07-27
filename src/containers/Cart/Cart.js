@@ -83,7 +83,7 @@ function Cart() {
                     <br/>
                     <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{title}</h3>
                     <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{maincategory}</h3>
-                   {maincategory=="female"&& <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>}
+                   {maincategory==="female"&& <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>}
                     <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Quantity:</p>
                     <div className="button-wrapper">
                       <button disabled={amount === 1} onClick={() => dispatch(handleProductAmount(id, 'decrement'))} className="size">-</button>

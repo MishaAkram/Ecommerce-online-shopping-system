@@ -47,7 +47,7 @@ function ProductList() {
           <h3 className="modal-title" style={textStyle}>Info:</h3>
           <p className="modal-subtitle" style={textStyle}>{subtitle}</p>
           <h3 className="modal-title" style={textStyle}>Price: PKR {price}.00</h3>
-          {maincategory == "female" && <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>}
+          {maincategory === "female" && <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>}
           <div className="btn-wrapper">
             <Link to={`/details/${id}`}>
               <Button clicked={() => showDetailsByModal()}>Show Details</Button>

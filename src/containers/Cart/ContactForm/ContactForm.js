@@ -60,7 +60,7 @@ function ContactForm() {
 
   const inputChangedHandler = (e, inputIndentifier) => {// ====== Immutably changind input values ======
     const updatedOrderForm = { // clone of orderForm
-      ...orderForm
+      ...orderForm  
     };
     const updatedFormElement = {// clone each elements (name, street, ...)
       ...updatedOrderForm[inputIndentifier]

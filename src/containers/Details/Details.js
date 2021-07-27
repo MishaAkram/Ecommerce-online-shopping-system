@@ -10,6 +10,27 @@ import { openModal, closeModal } from './../../store/actions/interfaceActions';
 import { addToCart, addToWishlist } from './../../store/actions/productActions'
 import { PropTypes } from 'prop-types';
 import Card from '@material-ui/core/Card';
+import Select from 'react-select'
+
+const option2 = [
+  { value: '5', label: '5' },
+  { value: '6', label: '6' },
+  { value: '7', label: '7' },
+  { value: '8', label: '8' },
+  { value: '9', label: '9' },
+  { value: '10', label: '10' },
+  { value: '11', label: '11' },
+  { value: '12', label: '12' },
+]
+const option1 = [
+  { value: 'S', label: "S" },
+  { value: 'M', label: "M" },
+  { value: 'L', label: "L" },
+  { value: 'XL', label: "XL" },
+  { value: 'XXl', label: "XXL" },
+]
+
+
 function Details(props) {
   const style = {
     margin: 0,
@@ -44,7 +65,7 @@ function Details(props) {
   const data = props.location.data
 
   const handleAddToCart = () => {
-    detailProduct.maincategory == "female" ? (value === '') ?
+    detailProduct.category !== 'un-stitched' ? (value === '') ?
       dispatch(openModal()) :
       dispatch(addToCart(detailProduct.id, value)) : dispatch(addToCart(detailProduct.id, value))
   };
@@ -63,59 +84,22 @@ function Details(props) {
       </Modal>
       <ul className="details-container">
         <Card>
-
           <DetailItem data={data}>
-            {detailProduct.maincategory == "female" &&
+            {detailProduct.category !== 'un-stitched' &&
               <>
                 <p className="detail-subtitle" style={textStyle}>Select Size:</p>
-                <div className="switch-field">
-                  <input
-                    type="radio"
-                    id="switch_s"
-                    name="switch_5"
-                    value="S"
-                    checked={value === 'S'}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label htmlFor="switch_s">S</label>
-                  <input
-                    type="radio"
-                    id="switch_m"
-                    name="switch_5"
-                    value="M"
-                    checked={value === 'M'}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label htmlFor="switch_m">M</label>
-                  <input
-                    type="radio"
-                    id="switch_l"
-                    name="switch_5"
-                    value="L"
-                    checked={value === 'L'}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label htmlFor="switch_l">L</label>
-                  <input
-                    type="radio"
-                    id="switch_xl"
-                    name="switch_5"
-                    value="XL"
-                    checked={value === 'XL'}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label htmlFor="switch_xl">XL</label>
-                  <input
-                    type="radio"
-                    id="switch_xxl"
-                    name="switch_5"
-                    value="XXL"
-                    checked={value === 'XXL'}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label htmlFor="switch_xxl">XXL</label>
+                <br />
+                <div className="col-sm-4">
+
+                  <Select
+                    options={detailProduct.maincategory === "female" ? option1 : option2}
+                    onChange={setValue}
+                    defaultValue={value}
+                    placeholder="Please select size" />
                 </div>
-              </>}
+                <br />
+              </>
+            }
             <div className="button-wrapper">
               <button style={style}
                 onClick={() => handleAddToCart()}
