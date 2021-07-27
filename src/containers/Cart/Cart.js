@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './Cart.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import {Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { useHistory } from 'react-router'
@@ -58,11 +58,11 @@ function Cart() {
 
 
   let list;
-  (cartItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500' ,fontFamily: "ACourier New, monospace" }}>You do not have any products on the list yet.</p> :
+  (cartItems.length === 0) ? list = <p className="main-info" style={{ marginTop: '20px', fontWeight: '500', fontFamily: "ACourier New, monospace" }}>You do not have any products on the list yet.</p> :
     list = (
       <TransitionGroup component="ul" className="cart-list">
         {cartItems.map(item => {
-          const { id, img, title, size, price, total, amount ,maincategory} = item;
+          const { id, img, title, size, price, total, amount, maincategory, category } = item;
           return (
             <CSSTransition key={id} classNames="fade" timeout={300}>
               <li >
@@ -80,18 +80,18 @@ function Cart() {
                       } />
                   </div>
                   <div className="cart-item-content">
-                    <br/>
-                    <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{title}</h3>
-                    <h3 className="name"  style={{fontFamily: "ACourier New, monospace",fontWeight:600}}>{maincategory}</h3>
-                   {maincategory==="female"&& <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {size}</p>}
-                    <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Quantity:</p>
+                    <br />
+                    <h3 className="name" style={{ fontFamily: "ACourier New, monospace", fontWeight: 600 }}>{title}</h3>
+                    <h3 className="name" style={{ fontFamily: "ACourier New, monospace", fontWeight: 600 }}>{maincategory}</h3>
+                    {((maincategory === "female" && category !=="un-stitched") || (maincategory==='accessories' && category ==='footware') ) && <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Size: {size}</p>}
+                    <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Quantity:</p>
                     <div className="button-wrapper">
                       <button disabled={amount === 1} onClick={() => dispatch(handleProductAmount(id, 'decrement'))} className="size">-</button>
                       <span className="size">{amount}</span>
                       <button onClick={() => dispatch(handleProductAmount(id, 'increment'))} className="size">+</button>
                     </div>
-                    <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Price: PKR {price}</p>
-                    <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Total: PKR {total}</p>
+                    <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Price: PKR {price}</p>
+                    <p className="value" style={{ fontFamily: "ACourier New, monospace" }}>Total: PKR {total}</p>
                     <Button clicked={() => dispatch(removeCartItem(id))} btnType="small">Remove</Button>
                   </div>
                 </Card>
@@ -106,9 +106,9 @@ function Cart() {
     <>
       <ScrollToTopOnMount />
       <div className="cart-container">
-        <h2 className="main-title"  style={{fontFamily: "ACourier New, monospace"}}>Shopping Cart</h2>
-        <Divider/>
-        <p className="main-info"  style={{fontFamily: "ACourier New, monospace"}}>You select <span className="bold">{(cartItems.length === 1) ? 1 : cartItems.length}</span> product.</p>
+        <h2 className="main-title" style={{ fontFamily: "ACourier New, monospace" }}>Shopping Cart</h2>
+        <Divider />
+        <p className="main-info" style={{ fontFamily: "ACourier New, monospace" }}>You select <span className="bold">{(cartItems.length === 1) ? 1 : cartItems.length}</span> product.</p>
         {cartItems.length > 0 &&
           <Button clicked={() => dispatch(clearCart())} btnType="dark">Clear Cart</Button>}
         <div className="content-wrapper">

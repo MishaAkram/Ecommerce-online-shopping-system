@@ -75,7 +75,7 @@ const footer = ({ filterProducts }) => (
             </i>
           </a>
         </div>
-        <p className="copyright" style={textStyle}>Company Name © 2021</p>
+        <p className="copyright" style={textStyle}>Elegant Store © 2021</p>
       </div>
     </footer>
   </div>

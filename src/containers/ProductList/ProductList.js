@@ -9,6 +9,8 @@ import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { closeModal, handleCheckboxValue, handleDirection, sortProducts, openModal, showDetails } from '../../store/actions';
+import Select from 'react-select'
+
 const textStyle = { fontFamily: "ACourier New, monospace" }
 
 function ProductList() {
@@ -16,11 +18,11 @@ function ProductList() {
   const modalShowed = useSelector(state => state.interface.modalShowed)
   const modalProduct = useSelector(state => state.interface.modalProduct)
   const checkboxValue = useSelector(state => state.products.sortCheckboxValue)
-  const { title, img, subtitle, price, id, maincategory } = modalProduct;
+  const { title, img, subtitle, price, id, maincategory, category } = modalProduct;
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    dispatch(handleCheckboxValue(e.target.value))
+    dispatch(handleCheckboxValue(e.value))
     dispatch(handleDirection())
     dispatch(sortProducts('price', 'id'))
   };
@@ -47,20 +49,25 @@ function ProductList() {
           <h3 className="modal-title" style={textStyle}>Info:</h3>
           <p className="modal-subtitle" style={textStyle}>{subtitle}</p>
           <h3 className="modal-title" style={textStyle}>Price: PKR {price}.00</h3>
-          {maincategory === "female" && <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>}
+          {(maincategory === "female" && category !== 'un-stitched') && <h3 className="modal-title" style={textStyle}>Sizes: S, M, L, XL, XXL</h3>}
           <div className="btn-wrapper">
             <Link to={`/details/${id}`}>
               <Button clicked={() => showDetailsByModal()}>Show Details</Button>
             </Link>
           </div>
         </Modal>
-        <div className="filter-panel">
-          Sort by:
-          <select onChange={(e) => handleChange(e)} value={checkboxValue}>
-            <option value="relevance" style={textStyle}>Relevance</option>
-            <option value="price - low to high" style={textStyle}>Price - low to high</option>
-            <option value="price - high to low" style={textStyle}>Price - high to low</option>
-          </select>
+        <div className="container">
+          <Select
+            className="select"
+            options={[
+              { value: "relevance", label: "Relevance" },
+              { value: "price - low to high", label: "price - low to high" },
+              { value: "price - high to low", label: "price - high to low" }
+            ]}
+            onChange={(e) => handleChange(e)}
+            defaultValue={checkboxValue}
+            placeholder="Sort by" />
+          <br />
           <p className="products-amount" style={textStyle}>Products amount: <span className="amount">{products.length}</span></p>
         </div>
         <div className="product-list-wrapper">

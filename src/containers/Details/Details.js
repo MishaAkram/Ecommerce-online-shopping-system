@@ -12,25 +12,6 @@ import { PropTypes } from 'prop-types';
 import Card from '@material-ui/core/Card';
 import Select from 'react-select'
 
-const option2 = [
-  { value: '5', label: '5' },
-  { value: '6', label: '6' },
-  { value: '7', label: '7' },
-  { value: '8', label: '8' },
-  { value: '9', label: '9' },
-  { value: '10', label: '10' },
-  { value: '11', label: '11' },
-  { value: '12', label: '12' },
-]
-const option1 = [
-  { value: 'S', label: "S" },
-  { value: 'M', label: "M" },
-  { value: 'L', label: "L" },
-  { value: 'XL', label: "XL" },
-  { value: 'XXl', label: "XXL" },
-]
-
-
 function Details(props) {
   const style = {
     margin: 0,
@@ -65,7 +46,8 @@ function Details(props) {
   const data = props.location.data
 
   const handleAddToCart = () => {
-    detailProduct.category !== 'un-stitched' ? (value === '') ?
+    (detailProduct.category !== 'un-stitched' && detailProduct.category !== "earings" &&
+      detailProduct.category !== "stoles" && detailProduct.category !== "bracelets") ? (value === '') ?
       dispatch(openModal()) :
       dispatch(addToCart(detailProduct.id, value)) : dispatch(addToCart(detailProduct.id, value))
   };
@@ -85,7 +67,12 @@ function Details(props) {
       <ul className="details-container">
         <Card>
           <DetailItem data={data}>
-            {detailProduct.category !== 'un-stitched' &&
+            {((detailProduct.category !== 'un-stitched' &&
+              detailProduct.maincategory === "female") ||
+              (detailProduct.maincategory === "accessories"
+                && detailProduct.category !== "earings" &&
+                detailProduct.category !== "stoles" &&
+                detailProduct.category !== "bracelets")) &&
               <>
                 <p className="detail-subtitle" style={textStyle}>Select Size:</p>
                 <br />
@@ -93,8 +80,8 @@ function Details(props) {
 
                   <Select
                     options={detailProduct.maincategory === "female" ? option1 : option2}
-                    onChange={setValue}
-                    defaultValue={value}
+                    onChange={(e) => setValue(e.value)}
+                    defaultValue={value.value}
                     placeholder="Please select size" />
                 </div>
                 <br />
@@ -135,3 +122,20 @@ Details.propTypes = {
 };
 export default Details
 
+const option2 = [
+  { value: '5', label: '5' },
+  { value: '6', label: '6' },
+  { value: '7', label: '7' },
+  { value: '8', label: '8' },
+  { value: '9', label: '9' },
+  { value: '10', label: '10' },
+  { value: '11', label: '11' },
+  { value: '12', label: '12' },
+]
+const option1 = [
+  { value: 'S', label: "S" },
+  { value: 'M', label: "M" },
+  { value: 'L', label: "L" },
+  { value: 'XL', label: "XL" },
+  { value: 'XXl', label: "XXL" },
+]
