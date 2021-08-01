@@ -42,8 +42,6 @@ function Cart() {
   const purchased = useSelector(state => state.order.purchased)
   const isAuth = useSelector(state => state.auth.token !== null)
   const dispatch = useDispatch();
-  console.log("cartitem")
-  console.log(cartItems)
   useEffect(() => {
     dispatch(calculateOrder());
   })

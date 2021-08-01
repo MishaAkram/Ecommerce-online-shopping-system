@@ -31,7 +31,6 @@ const order = ({ products, price }) => {
     <li className="order-item">
       <ul className="order-products">
         {products.map(product => (
-          <>
             <Card
               key={product.id}
               className="cart-item"
@@ -41,21 +40,17 @@ const order = ({ products, price }) => {
                 <img className="cart-item-img" src={product.img} style={thumb2} alt="product img" />
               </div>
               <div className="cart-item-content">
+                <br/>
                 <h3 className="name" style={textStyle}>{product.title}</h3>
+                <h3 className="name" style={textStyle}>category: {product.category}</h3>
                 <p className="value" style={textStyle}>Size: {product.size}</p>
-                <p className="value" style={textStyle}>Quantity:{product.quantity}</p>
+                <p className="value" style={textStyle}>Quantity:{product.amount}</p>
                 <p className="value" style={textStyle}>Price: PKR {product.price}</p>
+                <p className="value" style={textStyle}>Total: PKR {product.total}</p>
               </div>
             </Card>
-            {/* <Divider /> */}
-          </>
         ))}
       </ul>
-      <Card>
-        {"   "}
-        <p className="order-price" style={{ fontFamily: "ACourier New, monospace" }}>Total Price: PKR {price}</p>
-        <br />
-      </Card>
     </li>
   );
 };
