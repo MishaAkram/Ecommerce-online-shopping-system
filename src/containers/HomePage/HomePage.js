@@ -13,9 +13,8 @@ import PropTypes from 'prop-types';
 import { closeModal, purchaseInit } from '../../store/actions';
 import pic1 from "./104.jpg"
 import pic2 from "./accessories.jpg"
-
 import { filterProducts } from './../../store/actions/productActions';
-import NavigationItem from './../../components/Navigation/NavigationItems/NavigationItem';
+import { Link } from 'react-router-dom';
 const thumb2 = {
     display: 'inline-flex',
     borderRadius: 0,
@@ -71,18 +70,18 @@ function HomePage() {
                 <div className="col">
                     <div className="row">
                         <div style={thumb1}>
-                            <NavigationItem
-                                clicked={() => dispatch(filterProducts('female'))}
-                                link="/products/female" exact>
+                            <Link
+                                onClick={() => dispatch(filterProducts('female'))}
+                                link to="/products/female">
                                 <img src={pic1} style={thumb2} alt="women" />
-                            </NavigationItem>
+                            </Link>
                         </div>
                         <div style={thumb1}>
-                            <NavigationItem
-                                clicked={() => dispatch(filterProducts('accessories'))}
-                                link="/products/accessories" exact>
+                            <Link
+                                onClick={() => dispatch(filterProducts('accessories'))}
+                                link to="/products/accessories" >
                                 <img src={pic2} style={thumb2} alt="accessories" />
-                            </NavigationItem>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -31,13 +31,13 @@ export const purchaseInit = () => {
 };
 
 // after order button click
-export const purchaseOrder = (orderData) => {
+export const purchaseOrder =  (orderData, token) => {
   return dispatch => {
     dispatch(purchaseOrderStart());
-    axios.post('/orders.json', orderData)
+    axios.post('/orders.json?auth=' + token, orderData)
       .then(res => {
         console.log("res",res)
-        dispatch(purchaseOrderSuccess(res.data.name, orderData));
+        dispatch(purchaseOrderSuccess(res.data?.name, orderData));
         dispatch(actions.clearCart());
       })
       .catch(err => {
@@ -74,9 +74,9 @@ export const fetchOrders = (token, userId) => {
     dispatch(fetchOrdersStart());
     // query params (for check auth and filter orders)
     const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
-
     axios.get('/orders.json' + queryParams)
       .then(res => {
+        console.log("res",res)
         const fetchedOrders = [];
         for (let key in res.data) {
           fetchedOrders.push({

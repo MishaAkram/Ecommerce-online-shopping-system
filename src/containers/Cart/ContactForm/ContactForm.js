@@ -54,8 +54,7 @@ function ContactForm() {
       formData[formElementIndentifier] = orderForm[formElementIndentifier].value
     }
     const order = { products: cartItems, price: price, orderData: formData, userId: userId };
-    console.log(order)
-    dispatch(purchaseOrder(order));
+    dispatch(purchaseOrder(order,token));
   };
 
   const inputChangedHandler = (e, inputIndentifier) => {// ====== Immutably changind input values ======

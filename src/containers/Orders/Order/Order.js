@@ -1,4 +1,4 @@
-import { Divider } from '@material-ui/core';
+// import { Divider } from '@material-ui/core';
 import React from 'react';
 import './Order.scss';
 import Card from '@material-ui/core/Card';
@@ -24,37 +24,37 @@ const thumb2 = {
   padding: 5,
   boxSizing: 'border-box'
 };
-const textStyle={ fontFamily: "ACourier New, monospace" }
+const textStyle = { fontFamily: "ACourier New, monospace" }
 
-const order = ({products,price}) => {
+const order = ({ products, price }) => {
   return (
     <li className="order-item">
       <ul className="order-products">
-         {products.map(product => (
-           <>
+        {products.map(product => (
+          <>
             <Card
-            className="cart-item"
-            style={thumb}
-            boxshadow={3}>
-            <div className="img-wrapper">
-              <img className="cart-item-img" src={product.img} style={thumb2} alt="product img"/>
-            </div>
-            <div className="cart-item-content">
-              <h3 className="name"  style={{fontFamily: "ACourier New, monospace"}}>{product.title}</h3>
-              <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Size: {product.size}</p>
-              <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Quantity:{product.quantity}</p>
-              <p className="value"  style={{fontFamily: "ACourier New, monospace"}}>Price: PKR {product.price}</p>
-            </div>
-          </Card>
-           <Divider/>
+              key={product.id}
+              className="cart-item"
+              style={thumb}
+              boxshadow={3}>
+              <div className="img-wrapper">
+                <img className="cart-item-img" src={product.img} style={thumb2} alt="product img" />
+              </div>
+              <div className="cart-item-content">
+                <h3 className="name" style={textStyle}>{product.title}</h3>
+                <p className="value" style={textStyle}>Size: {product.size}</p>
+                <p className="value" style={textStyle}>Quantity:{product.quantity}</p>
+                <p className="value" style={textStyle}>Price: PKR {product.price}</p>
+              </div>
+            </Card>
+            {/* <Divider /> */}
           </>
         ))}
       </ul>
       <Card>
-       {"   "}
-
-      <p className="order-price" style={{fontFamily: "ACourier New, monospace"}}>Total Price: PKR {price}</p>
-      <br/>
+        {"   "}
+        <p className="order-price" style={{ fontFamily: "ACourier New, monospace" }}>Total Price: PKR {price}</p>
+        <br />
       </Card>
     </li>
   );

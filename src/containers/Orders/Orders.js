@@ -9,7 +9,8 @@ import Order from './Order/Order';
 import ScrollToTopOnMount from '../../shared/ScrollToTopOnMount';
 import { fetchOrders } from './../../store/actions/orderActions';
 import { Divider } from '@material-ui/core';
-const textStyle={ fontFamily: "ACourier New, monospace" }
+import Card from '@material-ui/core/Card';
+const textStyle = { fontFamily: "ACourier New, monospace" }
 
 function Orders() {
   const order = useSelector(state => state.order.orders)
@@ -19,27 +20,34 @@ function Orders() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchOrders(token, userId));
-  }, [dispatch, token, userId]);
-  if (loading) {
-    <Spinner />
-  }
-  var orders = <Spinner />;
-  if (!loading) {
-    (order.length === 0)
-      ? orders = <p style={textStyle}>You do not have any orders yet.</p>
-      : orders = order.map(order => (
-        <Order key={order.id} products={order.products} price={order.price} />
-      ))
-  };
-
+  }, [userId, dispatch, token,]);
   return (
     <>
       <ScrollToTopOnMount />
       <div className="orders-container">
         <h2 className="main-title" style={textStyle}>YOUR ORDERS</h2>
-        <Divider/>
+        <Divider />
         <ul className="order-list">
-          {orders}
+          {loading ? <Spinner /> : (order.length === 0)
+            ? <div> <p style={textStyle}>You do not have any orders yet.</p>
+              <div style={{ margin: "230px" }} /></div>
+            :
+            <div className="col">
+              <div className="row">
+                <div>
+                  {order.map(order => (
+                    <Order key={order.id} products={order.products} price={order.price} />
+                  ))}
+                </div>
+                <div >
+                  <Card>
+                    Order Details
+
+                  </Card>
+                </div>
+              </div>
+            </div>
+          }
         </ul>
       </div>
     </>
