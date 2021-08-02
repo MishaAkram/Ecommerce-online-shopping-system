@@ -26,7 +26,7 @@ const thumb2 = {
 };
 const textStyle = { fontFamily: "ACourier New, monospace" }
 
-const order = ({ products, price }) => {
+const order = ({ products}) => {
   return (
     <li className="order-item">
       <ul className="order-products">

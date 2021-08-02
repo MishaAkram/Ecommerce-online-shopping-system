@@ -54,7 +54,11 @@ function Details(props) {
   if (!detailProduct) return <Redirect to="/" />
 
   return (
-    <>
+    <div style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto"
+    }}>
       <ScrollToTopOnMount />
       <Modal
         modalType="small"
@@ -109,7 +113,7 @@ function Details(props) {
           </DetailItem>
         </Card>
       </ul>
-    </>
+    </div>
   )
 }
 Details.propTypes = {

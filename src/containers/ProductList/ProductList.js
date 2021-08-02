@@ -36,7 +36,11 @@ function ProductList() {
   };
 
   return (
-    <>
+    <div style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto"
+    }}>
       <ScrollToTopOnMount />
       <div className="product-container">
         <Modal
@@ -87,7 +91,7 @@ function ProductList() {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 ProductList.propTypes = {

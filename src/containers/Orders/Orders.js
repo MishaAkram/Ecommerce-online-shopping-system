@@ -34,9 +34,9 @@ function Orders() {
             <>
               <TransitionGroup component="ul" className="order-list">
                 <CSSTransition key={order.id} classNames="fade" timeout={300}>
-                  <li >
+                  <ul >
                     <Order key={order.id} products={order.products} price={order.price} />
-                  </li>
+                  </ul>
                 </CSSTransition>
               </TransitionGroup>
               <TransitionGroup component="ul" className="order-list">

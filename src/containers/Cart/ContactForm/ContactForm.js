@@ -16,6 +16,9 @@ function ContactForm() {
   const loading = useSelector(state => state.order.load)
   const token = useSelector(state => state.auth.token)
   const userId = useSelector(state => state.auth.userId)
+  const delivery = useSelector(state => state.products.delivery)
+  const priceTotal = useSelector(state => state.products.priceTotal)
+  
   const dispatch = useDispatch();
   const [orderForm, setOrderForm] = useState({
     name: {
@@ -53,7 +56,7 @@ function ContactForm() {
     for (let formElementIndentifier in orderForm) {
       formData[formElementIndentifier] = orderForm[formElementIndentifier].value
     }
-    const order = { products: cartItems, price: price, orderData: formData, userId: userId };
+    const order = { products: cartItems, price: price, orderData: formData, userId: userId ,delivery:delivery,priceTotal:priceTotal};
     dispatch(purchaseOrder(order,token));
   };
 

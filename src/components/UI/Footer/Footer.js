@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const textStyle = { fontFamily: "ACourier New, monospace" }
 const footer = ({ filterProducts }) => (
   <div>
-    <footer 
+    <footer
     // className="footer"
     >
       <div className="support-section">
@@ -19,25 +19,25 @@ const footer = ({ filterProducts }) => (
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('female')}
-                    link to="/products/female" exact>Women</Link>
+                    to="/products/female" exact="true">Women</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('kurtis')}
-                    link to="/products/female" exact>Kurtis</Link>
+                    to="/products/female" exact="true">Kurtis</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('un-stitched')}
-                    link to="/products/female" exact>Unstitched</Link>
+                    to="/products/female" exact="true">Unstitched</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('stitched')}
-                    link to="/products/female" exact>Stitched</Link>
+                    to="/products/female" exact="true">Stitched</Link>
                 </li>
 
               </ul>
@@ -49,66 +49,66 @@ const footer = ({ filterProducts }) => (
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('accessories')}
-                    link to="/products/accessories" exact>Accessories</Link>
+                    to="/products/accessories" >Accessories</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('earings')}
-                    link to="/products/accessories" exact>Earings</Link>
+                    to="/products/accessories" exact="true">Earings</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('bracelets')}
-                    link to="/products/accessories" exact>Bracelets</Link>
+                    to="/products/accessories" exact="true">Bracelets</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('stoles')}
-                    link to="/products/accessories" exact>Stoles</Link>
+                    to="/products/accessories" exact="true">Stoles</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('footware')}
-                    link to="/products/accessories" exact>Footware</Link>
+                    to="/products/accessories" exact="true">Footware</Link>
                 </li>
               </ul>
             </div>
             <div className="about-us col-sm-6 col-md-3 item">
               <h4 style={textStyle}>About Us</h4>
               <ul>
-                <li><Link link to="/about-us" style={textStyle}>Who We Are</Link></li>
-                <li><Link link to="/about-us" style={textStyle}>Work with Us</Link></li>
-                <li><Link link to="/" style={textStyle}>Social Media</Link></li>
-                <li><Link link to="/" style={textStyle}>Our Stores</Link></li>
+                <li><Link to="/about-us" style={textStyle}>Who We Are</Link></li>
+                <li><Link to="/about-us" style={textStyle}>Work with Us</Link></li>
+                <li><Link to="/" style={textStyle}>Social Media</Link></li>
+                <li><Link to="/" style={textStyle}>Our Stores</Link></li>
               </ul>
             </div>
             <div className="support col-sm-6 col-md-3 item">
               <h4 style={textStyle}>Support</h4>
               <ul>
-                <li><Link link to="/contact-us" style={textStyle}>Contact Us</Link></li>
-                <li><Link link to="/contact-us" style={textStyle}>Find Store</Link></li>
-                <li><Link link to="/contact-us" style={textStyle}>Customer Service</Link></li>
-                <li><Link link to="/contact-us" style={textStyle}>Privacy & Cookies</Link></li>
+                <li><Link to="/contact-us" style={textStyle}>Contact Us</Link></li>
+                <li><Link to="/contact-us" style={textStyle}>Find Store</Link></li>
+                <li><Link to="/contact-us" style={textStyle}>Customer Service</Link></li>
+                <li><Link to="/contact-us" style={textStyle}>Privacy & Cookies</Link></li>
               </ul>
             </div>
           </div>
         </div>
         <div className="col item social">
-          <Link to={{pathname:"https://www.facebook.com"}} target="_blank" >
+          <Link to={{ pathname: "https://www.facebook.com" }} target="_blank" >
             <i className="fab fa-facebook-f"></i>
           </Link>
-          <Link to={{pathname:"https://www.instagram.com"}} target="_blank" >
+          <Link to={{ pathname: "https://www.instagram.com" }} target="_blank" >
             <i className="fab fa-instagram"></i>
           </Link>
-          <Link to={{pathname:"https://www.snapchat.com"}} target="_blank" >
+          <Link to={{ pathname: "https://www.snapchat.com" }} target="_blank" >
             <i className="fab fa-snapchat">
             </i>
           </Link>
-          <Link to={{pathname:"https://www.twitter.com"}} target="_blank" >
+          <Link to={{ pathname: "https://www.twitter.com" }} target="_blank" >
             <i className="fab fa-twitter"></i>
           </Link>
           <Link to={{ pathname: "https://github.com/MishaAkram/Ecommerce-online-shopping-system" }} target="_blank">

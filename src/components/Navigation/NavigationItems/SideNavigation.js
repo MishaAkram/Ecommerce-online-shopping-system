@@ -53,14 +53,14 @@ const femaleCategories = [
 const sideNavigation = ({ filterProducts, children }) => (
   <nav className="side-navigation">
     <ul className="side-navigation-list">
-      {femaleCategories.map(femaleCategory => {
+      {femaleCategories.map((femaleCategory,index) => {
         const { category, linkType, content } = femaleCategory;
 
         return (
           <Card >
             <br />
             <NavigationItem
-              key={category}
+              key={index}
               clicked={() => filterProducts(category)}
               linkType={linkType}
               link={`/products/${category}`}>

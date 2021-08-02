@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggleSideDrawer } from '../../store/actions';
 import './Navigation.scss';
-
 import logo from '../../assets/icons/logo.png';
 import closeBtnIcon from '../../assets/icons/arrow_left.png';
-
 import SideNavigation from './NavigationItems/SideNavigation';
 import NavigationItem from './NavigationItems/NavigationItem';
 import Backdrop from '../UI/Backdrop/Backdrop';
@@ -16,7 +14,6 @@ const sideDrawer = ({ toggleSideDrawer, showSideDrawer, isAuth }) => {
   if (showSideDrawer) {
     attachedClasses = ["side-drawer", "open"];
   };
-
   return (
     <>
       <Backdrop show={showSideDrawer} clicked={toggleSideDrawer} />
@@ -28,18 +25,21 @@ const sideDrawer = ({ toggleSideDrawer, showSideDrawer, isAuth }) => {
           </button>
         </div>
         <div onClick={toggleSideDrawer} className="side-navigation-wrapper">
-          <SideNavigation>
+          <SideNavigation key="sideNavigation">
             <NavigationItem
+              key="contacts"
               linkType={'main'}
               link="/contact"
               exact>Contact</NavigationItem>
             <NavigationItem
+              key="home"
               linkType={'main'}
               link="/"
               exact>Home</NavigationItem>
             {isAuth ? <NavigationItem
               linkType={'main'}
               link="/orders"
+              key="orders"
               exact>Orders</NavigationItem> : null}
           </SideNavigation>
         </div>

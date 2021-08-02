@@ -19,21 +19,21 @@ const thumb2 = {
     display: 'inline-flex',
     borderRadius: 0,
     border: '3px solid #eaeaea',
-    marginBottom: 2,
-    marginRight: 2,
-    width: 425,
-    height: 600,
-    padding: 5,
+    marginBottom: 4,
+    marginRight: 4,
+    width: 325,
+    height: 500,
+    padding: 10,
     boxSizing: 'border-box'
 };
 const thumb1 = {
     display: 'inline-flex',
     borderRadius: 0,
-    marginBottom: 2,
-    marginRight: 2,
-    width: 425,
-    height: 600,
-    padding: 5,
+    marginBottom: 4,
+    marginRight: 4,
+    width: 325,
+    height: 400,
+    padding: 10,
     boxSizing: 'border-box'
 };
 const slides = [];
@@ -68,18 +68,19 @@ function HomePage() {
                 </div>
                 <br />
                 <div className="col">
-                    <div className="row">
+                    <div className="row" style={{margin:"0 auto"}}>
                         <div style={thumb1}>
                             <Link
                                 onClick={() => dispatch(filterProducts('female'))}
-                                link to="/products/female">
+                                to="/products/female">
                                 <img src={pic1} style={thumb2} alt="women" />
                             </Link>
                         </div>
+                        {/* <div style={{ width: "23px" }} /> */}
                         <div style={thumb1}>
                             <Link
                                 onClick={() => dispatch(filterProducts('accessories'))}
-                                link to="/products/accessories" >
+                                to="/products/accessories" >
                                 <img src={pic2} style={thumb2} alt="accessories" />
                             </Link>
                         </div>

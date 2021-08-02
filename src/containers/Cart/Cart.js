@@ -57,11 +57,11 @@ function Cart() {
 
   let list;
   (cartItems.length === 0) ?
-    list = <p className="main-info"
+    list = <div className="main-info"
       style={{ marginTop: '20px', fontWeight: '500', fontFamily: "ACourier New, monospace" }}
     >You do not have any products on the list yet.
-      <div style={{ margin: "230px" }}/>
-    </p> :
+      <div style={{ margin: "230px" }} />
+    </div> :
     list = (
       <TransitionGroup component="ul" className="cart-list">
         {cartItems.map(item => {
@@ -106,7 +106,11 @@ function Cart() {
     );
 
   return (
-    <>
+    <div style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto"
+    }}>
       <ScrollToTopOnMount />
       <div className="cart-container">
         <h2 className="main-title" style={{ fontFamily: "ACourier New, monospace" }}>Shopping Cart</h2>
@@ -123,7 +127,7 @@ function Cart() {
         </div>
         {purchased && <Redirect to="/" />}
       </div>
-    </>
+    </div>
   );
 }
 export default Cart;

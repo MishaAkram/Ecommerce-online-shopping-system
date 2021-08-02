@@ -81,23 +81,23 @@ class Product extends Component {
                 }}
               />
             </CardMedia>
-            <div>
-              <CardContent style={{ height: 10 }}>
-                {title}
-                <br />
-                Price: PKR {price}.00
-                <Divider />
-              </CardContent>
-            </div>
-            <div>
-              <Link to={`/details/${id}`}>
-                <Button size="small" color="primary"
-                  clicked={() => this.props.showDetails(id)}
-                  btnType="mobile">Show Details
-                </Button>
-              </Link>
-            </div>
           </CardActionArea>
+          <div>
+            <CardContent style={{ height: 10 }}>
+              {title}
+              <br />
+              Price: PKR {price}.00
+              <Divider />
+            </CardContent>
+          </div>
+          {/* <div> */}
+          <Link to={`/details/${id}`}>
+            <Button size="small" color="primary"
+              clicked={() => this.props.showDetails(id)}
+              btnType="mobile">Show Details
+            </Button>
+          </Link>
+          {/* </div> */}
         </Card>
       </Box>
     )
