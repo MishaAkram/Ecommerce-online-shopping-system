@@ -30,7 +30,11 @@ function Wishlist() {
       </TransitionGroup>
     );
   return (
-    <>
+    <div style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto"
+    }}>
       <ScrollToTopOnMount />
       <div className="wishlist-container">
         <h2 className="main-title" style={textStyle}>My Wishlist</h2>
@@ -41,7 +45,7 @@ function Wishlist() {
           <Button clicked={() => dispatch(clearWishlist())} btnType="dark" style={textStyle}>Clear Wishlist</Button>
         }
       </div>
-    </>
+    </div>
   )
 }
 

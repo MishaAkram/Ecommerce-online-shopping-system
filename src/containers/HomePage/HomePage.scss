@@ -10,7 +10,7 @@
 
   .sale {
     height: 350px;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     color: #fff;
     padding: 1em;
@@ -30,7 +30,7 @@ $totalAnimationTime: 20s;
   width: 100%;
   height: 350px;
   overflow: hidden;
-  position:relative;
+  position: relative;
 
   @include mediaMd {
     height: calc(400px + 16vw);
@@ -81,4 +81,173 @@ $totalAnimationTime: 20s;
   40% {
     opacity: 0;
   }
+}
+
+.groupbanner-text .group-info Link {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cdz-three-banner.fastest-ellyana-threebanner {
+  display: flex;
+  flex-flow: wrap;
+}
+.cdz-three-banner.fastest-ellyana-threebanner .grifo-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .cdz-three-banner.fastest-ellyana-threebanner .group-info {
+    display: block;
+    background-color: #fff;
+    padding: 0px 0px;
+  }
+  .cdz-three-banner.fastest-ellyana-threebanner .grifo-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .cdz-three-banner.fastest-ellyana-threebanner .col-sm-8 {
+    width: 50%;
+  }
+  .cdz-three-banner.fastest-ellyana-threebanner .col-sm-8.last {
+    width: 100%;
+  }
+}
+.widget {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+  clear: both;
+  margin-bottom: 45px;
+}
+.column {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  min-height: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-basis: 100%;
+  width: 100%;
+  order: 2;
+  padding-bottom: 0;
+}
+
+.columns {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 0;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.nav-links {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding-top: 0;
+}
+.m {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+.n {
+  -webkit-text-size-adjust: 100%;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 300;
+}
+.n Link {
+  -webkit-text-size-adjust: 100%;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: #282828;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.q {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+.s {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+}
+.x {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 22px 20px;
+}
+.i {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  img {
+    // width: 400px;
+    // height: 290;
+    max-width: 471px;
+    max-height: 270px;
+    overflow: hidden;
+  }
+}
+
+.y {
+  -webkit-text-size-adjust: 100%;
+  color: #282828;
+  font: 400 13px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  width: 33.33333%;
 }
