@@ -252,3 +252,11 @@ $totalAnimationTime: 20s;
   float: left;
   width: 33.33333%;
 }
+.hover{
+  transition: all .1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+}

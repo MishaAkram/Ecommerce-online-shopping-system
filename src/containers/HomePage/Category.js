@@ -17,7 +17,7 @@ const Category = ({ img, link, title, maincategory, category }) => {
                     onClick={() => dispatch(filterProducts(category))}
                     to={`/products/${maincategory}`}
                     style={text}>
-                    <img src={img} alt={title} width="585" />
+                    <img className="hover" src={img} alt={title} width="585" />
                 </Link>
                 <div className="group-info x">
                     <div className="groupinfo-inner s">

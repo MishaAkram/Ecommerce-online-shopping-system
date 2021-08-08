@@ -141,12 +141,12 @@ Some screens of the application is given below for better understanding.
 <div float="left">
  <img style="display:'inline'" src = "https://logowik.com/content/uploads/images/visual-studio-code7642.jpg" width = "250" height = 100> 
 
-<img style="display:'inline'"  src = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.PNG" width = "250" height = 100> 
+<img style="display:'inline'"  src = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.png" width = "250" height = 100> 
 
 <img style="display:'inline'" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1XVtjEYPj0BoSZ9nrSBJ5nr319wO73dEcfD17BSzTf-m-q-rSZ9FGDO4yzzvd_AWQqo&usqp=CAU" width = "250" height = 100> 
 
-<img style="display:'inline'" src="https://coursework.vschool.io/content/images/2017/12/surge_static_hosting.PNG" width = "250" height = 100>
-<img style="display:'inline'" src="https://cdn.shopify.com/s/files/1/1509/1638/articles/sourcetree-transparent_grande_9cf2ca0c-c597-4bdc-875a-72530cfe175c_600x600_crop_center.PNG?v=1563480242" width = "250" height = 100>
+<img style="display:'inline'" src="https://coursework.vschool.io/content/images/2017/12/surge_static_hosting.png" width = "250" height = 100>
+<img style="display:'inline'" src="https://cdn.shopify.com/s/files/1/1509/1638/articles/sourcetree-transparent_grande_9cf2ca0c-c597-4bdc-875a-72530cfe175c_600x600_crop_center.png?v=1563480242" width = "250" height = 100>
 
 <img style="display:'inline'" src="https://blog.alexdevero.com/wp-content/uploads/2015/03/sass-logo.jpg" width = "250" height = 100>
 </div>
