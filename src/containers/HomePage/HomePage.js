@@ -20,39 +20,10 @@ import Button from '../../components/UI/Button/Button';
 import Modal from '../../components/UI/Modal/Modal';
 import PropTypes from 'prop-types';
 import { closeModal, purchaseInit } from '../../store/actions';
-import pic1 from "./104.jpg"
-import pic2 from "./accessories.jpg"
-import { filterProducts } from './../../store/actions/productActions';
-import { Link } from 'react-router-dom';
 import './Category'
 
 import Category from './Category';
-import backdrop from './../../components/UI/Backdrop/Backdrop';
-const thumb2 = {
-    display: 'inline-flex',
-    borderRadius: 0,
-    border: '3px solid #eaeaea',
-    marginBottom: 4,
-    marginRight: 4,
-    width: 325,
-    height: 500,
-    padding: 10,
-    boxSizing: 'border-box'
-};
-const thumb1 = {
-    display: 'inline-flex',
-    borderRadius: 0,
-    marginBottom: 4,
-    marginRight: 4,
-    width: 325,
-    height: 400,
-    padding: 10,
-    boxSizing: 'border-box'
-};
-const text = {
-    fontSize: "15px",
-    fontWeight: 500
-}
+
 const slides = [];
 slides.push(slideOne, slideTwo, slideThree, slideFour, slideFive);
 function HomePage() {
@@ -84,25 +55,6 @@ function HomePage() {
                     ))}
                 </div>
                 <br />
-
-                {/* <div className="col">
-                    <div className="row" style={{margin:"0 auto"}}>
-                        <div style={thumb1}>
-                            <Link
-                                onClick={() => dispatch(filterProducts('female'))}
-                                to="/products/female">
-                                <img src={pic1} style={thumb2} alt="women" />
-                            </Link>
-                        </div>
-                        <div style={thumb1}>
-                            <Link
-                                onClick={() => dispatch(filterProducts('accessories'))}
-                                to="/products/accessories" >
-                                <img src={pic2} style={thumb2} alt="accessories" />
-                            </Link>
-                        </div>
-                    </div>
-                </div> */}
                 <div className="nav-links">
                     <div className="columns">
                         <div className="column">
