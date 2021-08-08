@@ -83,52 +83,52 @@ Some screens of the application is given below for better understanding.
 
 
 <p> Home Screen <br/> 
- <img src="screenshots/Capture1.png" width="400px" title="Home screen"/>
- <img src="screenshots/Capture10.png" width="400px" title="Home screen"/>
- <img src="screenshots/Capture11.png" width="400px" title="Home screen"/>
+ <img src="screenshots/Capture1.PNG" width="400px" title="Home screen"/>
+ <img src="screenshots/Capture10.PNG" width="400px" title="Home screen"/>
+ <img src="screenshots/Capture11.PNG" width="400px" title="Home screen"/>
 
 </p>
  
  <p> Products Screen <br/> 
- <img src="screenshots/Capture2.png" width="400px" title="Products screen"/>
- <img src="screenshots/Capture12.png" width="400px" title="Products screen"/>
- <img src="screenshots/Capture13.png" width="400px" title="Products screen"/>
+ <img src="screenshots/Capture2.PNG" width="400px" title="Products screen"/>
+ <img src="screenshots/Capture12.PNG" width="400px" title="Products screen"/>
+ <img src="screenshots/Capture13.PNG" width="400px" title="Products screen"/>
 </p>
 
 <p> submitting credentials <br/> 
- <img src="screenshots/Capture14.png" width="400px" title="After submitting credentials screen"/>
- <img src="screenshots/Capture4.png" width="400px" title="If credentials are not correct screen"/>
+ <img src="screenshots/Capture14.PNG" width="400px" title="After submitting credentials screen"/>
+ <img src="screenshots/Capture4.PNG" width="400px" title="If credentials are not correct screen"/>
 </p>
 
 
 <p> Cart Screen <br/> 
- <img src="screenshots/Capture5.png" width="400px" title="Cart screen"/>
- <img src="screenshots/Capture16.png" width="400px" title="Cart screen"/>
+ <img src="screenshots/Capture5.PNG" width="400px" title="Cart screen"/>
+ <img src="screenshots/Capture16.PNG" width="400px" title="Cart screen"/>
 </p>
 
 <p> Wishlist <br/> 
- <img src="screenshots/Capture7.png" width="400px" title="Wishlist screen"/>
- <img src="screenshots/Capture15.png" width="400px" title="Wishlist screen"/>
+ <img src="screenshots/Capture7.PNG" width="400px" title="Wishlist screen"/>
+ <img src="screenshots/Capture15.PNG" width="400px" title="Wishlist screen"/>
 </p>
 
 <p> Details screen<br/> 
- <img src="screenshots/Capture17.png" width="400px" title="Details screen"/>
- <img src="screenshots/Capture18.png" width="400px" title="Details screen"/>
+ <img src="screenshots/Capture17.PNG" width="400px" title="Details screen"/>
+ <img src="screenshots/Capture18.PNG" width="400px" title="Details screen"/>
 
 </p>
 
 <p> Orders screen <br/> 
- <img src="screenshots/Capture19.png" width="400px" title="orders screen"/>
- <img src="screenshots/Capture20.png" width="400px" title="orders screen"/>
- <img src="screenshots/Capture21.png" width="400px" title="orders screen"/>
+ <img src="screenshots/Capture19.PNG" width="400px" title="orders screen"/>
+ <img src="screenshots/Capture20.PNG" width="400px" title="orders screen"/>
+ <img src="screenshots/Capture21.PNG" width="400px" title="orders screen"/>
 </p>
 
 <p> Contact us screen <br/> 
- <img src="screenshots/Capture22.png" width="400px" title="contact us screen"/>
+ <img src="screenshots/Capture22.PNG" width="400px" title="contact us screen"/>
 </p>
 
 <p> About us <br/> 
- <img src="screenshots/Capture23.png" width="400px" title="About us screen"/>
+ <img src="screenshots/Capture23.PNG" width="400px" title="About us screen"/>
 </p>
 
 
@@ -141,12 +141,12 @@ Some screens of the application is given below for better understanding.
 <div float="left">
  <img style="display:'inline'" src = "https://logowik.com/content/uploads/images/visual-studio-code7642.jpg" width = "250" height = 100> 
 
-<img style="display:'inline'"  src = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.png" width = "250" height = 100> 
+<img style="display:'inline'"  src = "https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.PNG" width = "250" height = 100> 
 
 <img style="display:'inline'" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1XVtjEYPj0BoSZ9nrSBJ5nr319wO73dEcfD17BSzTf-m-q-rSZ9FGDO4yzzvd_AWQqo&usqp=CAU" width = "250" height = 100> 
 
-<img style="display:'inline'" src="https://coursework.vschool.io/content/images/2017/12/surge_static_hosting.png" width = "250" height = 100>
-<img style="display:'inline'" src="https://cdn.shopify.com/s/files/1/1509/1638/articles/sourcetree-transparent_grande_9cf2ca0c-c597-4bdc-875a-72530cfe175c_600x600_crop_center.png?v=1563480242" width = "250" height = 100>
+<img style="display:'inline'" src="https://coursework.vschool.io/content/images/2017/12/surge_static_hosting.PNG" width = "250" height = 100>
+<img style="display:'inline'" src="https://cdn.shopify.com/s/files/1/1509/1638/articles/sourcetree-transparent_grande_9cf2ca0c-c597-4bdc-875a-72530cfe175c_600x600_crop_center.PNG?v=1563480242" width = "250" height = 100>
 
 <img style="display:'inline'" src="https://blog.alexdevero.com/wp-content/uploads/2015/03/sass-logo.jpg" width = "250" height = 100>
 </div>
