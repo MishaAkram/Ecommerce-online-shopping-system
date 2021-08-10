@@ -68,9 +68,8 @@ function Cart() {
           const { id, img, title, size, price, total, amount, maincategory, category } = item;
           return (
             <CSSTransition key={id} classNames="fade" timeout={300}>
-              <li >
+              <li className="cart-item">
                 <Card
-                  className="cart-item"
                   style={thumb}
                   boxshadow={3}>
                   <div className="img-wrapper">

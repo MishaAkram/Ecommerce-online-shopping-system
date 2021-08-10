@@ -7,12 +7,12 @@ const textStyle = { fontFamily: "ACourier New, monospace" }
 const footer = ({ filterProducts }) => (
   <div>
     <footer
-    // className="footer"
+    className="footer"
     >
       <div className="support-section">
         <div className="container">
           <div className="support-wrapper">
-            <div className="buy-from-us">
+            <div className="footer-links">
               <h4 style={textStyle}>Women</h4>
               <ul>
                 <li>
@@ -42,7 +42,7 @@ const footer = ({ filterProducts }) => (
 
               </ul>
             </div>
-            <div className="col-sm-6 col-md-3 item">
+            <div className="footer-links">
               <h4 style={textStyle}>Accessories</h4>
               <ul>
                 <li>
@@ -77,7 +77,7 @@ const footer = ({ filterProducts }) => (
                 </li>
               </ul>
             </div>
-            <div className="about-us col-sm-6 col-md-3 item">
+            <div className="footer-links">
               <h4 style={textStyle}>About Us</h4>
               <ul>
                 <li><Link to="/about-us" style={textStyle}>Who We Are</Link></li>
@@ -86,7 +86,7 @@ const footer = ({ filterProducts }) => (
                 <li><Link to="/" style={textStyle}>Our Stores</Link></li>
               </ul>
             </div>
-            <div className="support col-sm-6 col-md-3 item">
+            <div className="footer-links">
               <h4 style={textStyle}>Support</h4>
               <ul>
                 <li><Link to="/contact-us" style={textStyle}>Contact Us</Link></li>

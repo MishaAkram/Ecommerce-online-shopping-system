@@ -51,7 +51,11 @@ function Orders() {
       </>
     );
   return (
-    <>
+    <div style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto"
+    }}>
       <ScrollToTopOnMount />
       <div className="order-container">
         <h2 className="main-title" style={{ fontFamily: "ACourier New, monospace" }}>YOUR ORDERS</h2>
@@ -60,7 +64,7 @@ function Orders() {
           {list}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

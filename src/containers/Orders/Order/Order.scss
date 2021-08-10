@@ -1,14 +1,60 @@
-@import '../../../index.scss';
+@import "../../../index.scss";
 
-.order-item {
+.orders-item {
   margin-top: 2.8em;
+  display: flex;
+  margin-bottom: 1.2em;
 }
 
 .order-price {
   font-weight: $fw-medium;
-  margin-top: .6em;
+  margin-top: 0.6em;
 }
 
 span.bold {
   font-weight: $fw-medium;
+}
+
+.order-list {
+  max-width: 360px;
+  margin: 0 auto;
+  margin-top: 1em;
+  list-style: none;
+
+  @include mediaMd {
+    max-width: 700px;
+    margin: auto 0;
+    margin-top: 1em;
+  }
+}
+.order-item {
+  display: flex;
+  margin-bottom: 1.2em;
+
+  .img-wrapper {
+    flex: 1;
+    padding-top: 0.4em;
+  }
+
+  .order-item-content {
+    flex: 1;
+    padding-left: 0.4em;
+
+    .name {
+      font-size: 0.9em;
+      font-weight: $fw-medium;
+
+      @include mediaMd {
+        font-size: 1.1em;
+      }
+    }
+
+    .value {
+      font-size: 0.9em;
+
+      @include mediaMd {
+        font-size: 1em;
+      }
+    }
+  }
 }
