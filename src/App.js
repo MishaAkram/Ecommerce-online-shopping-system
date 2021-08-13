@@ -50,12 +50,5 @@ function App() {
   );
 }
 
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     onTryAutoSignup: () => dispatch(actions.authCheckState())
-//   };
-// };
-
 export default withRouter(App);
-// export default App;
+

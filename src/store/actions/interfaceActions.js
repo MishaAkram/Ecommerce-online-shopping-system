@@ -8,8 +8,6 @@ export const closeModal = (id) => dispatch => {
   dispatch({ type: actionTypes.CLOSE_MODAL })
 };
 
-export const toggleSideDrawer = () => {
-  return {
-    type: actionTypes.TOGGLE_SIDEDRAWER,
-  };
+export const toggleSideDrawer = () => dispatch => {
+  dispatch({type: actionTypes.TOGGLE_SIDEDRAWER});
 };
