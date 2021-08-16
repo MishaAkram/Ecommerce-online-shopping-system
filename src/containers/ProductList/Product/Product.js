@@ -47,17 +47,17 @@ class Product extends Component {
   render() {
     const { id, img, price, title } = this.props.product;
     return (
-      <Box className="product">
-        <Card style={{
-          width: 325,
-          height: 500,
-          border: '3px solid #eaeaea',
-          borderRadius: 0,
-          marginBottom: 5,
-          padding: 7,
-          marginRight: 5,
-          display: 'cover'
-        }}
+      <Box >
+        <Card
+          style={{
+            width: 325,
+            height: 500,
+            border: '3px solid #eaeaea',
+            borderRadius: 0,
+            marginBottom: 5,
+            padding: 7,
+            display: 'cover'
+          }}
           className="product"
           boxshadow={3}>
           <CardActionArea>
@@ -90,14 +90,12 @@ class Product extends Component {
               <Divider />
             </CardContent>
           </div>
-          {/* <div> */}
           <Link to={`/details/${id}`}>
             <Button size="small" color="primary"
               clicked={() => this.props.showDetails(id)}
               btnType="mobile">Show Details
             </Button>
           </Link>
-          {/* </div> */}
         </Card>
       </Box>
     )

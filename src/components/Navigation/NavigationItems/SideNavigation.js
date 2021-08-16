@@ -4,81 +4,53 @@ import { connect } from 'react-redux';
 import { filterProducts } from '../../../store/actions';
 import '../Navigation.scss';
 import NavigationItem from './NavigationItem';
-import Card from '@material-ui/core/Card';
 import { Divider } from '@material-ui/core';
-const textStyle = { fontFamily: "ACourier New, monospace" }
-const femaleCategories = [
-  {
-    category: 'female',
-    content: 'Women',
-    linkType: 'main'
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { femaleCategories } from '../category';
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
   },
-  {
-    category: 'kurtis',
-    content: 'Kurtis'
-  },
-  {
-    category: 'stitched',
-    content: 'Stitched Dresses',
-  },
-  {
-    category: 'un-stitched',
-    content: 'Unstitched Dresses',
-  },
+  link:{
+    fontFamily: "ACourier New, monospace",
+  }
+}));
 
-  {
-    category: 'accessories',
-    content: 'Accessories',
-    linkType: 'main'
-  },
-  {
-    category: 'bracelets',
-    content: 'Bracelets',
-  },
-  {
-    category: 'earings',
-    content: 'Earings',
-  },
-  {
-    category: 'footware',
-    content: 'Footware',
-  },
-  {
-    category: 'stoles',
-    content: 'Stoles',
-  },
+const SideNavigation = ({ filterProducts}) => {
+  const classes = useStyles();
+  return (
+    <nav className="side-navigation">
+      <ul className="side-navigation-list">
+        <List component="nav" className={classes.root} aria-label="mailbox folders">
+          {femaleCategories.map((femaleCategory, index) => {
+            const { category, linkType, content, link } = femaleCategory
+            return (
+              !link &&
+              <NavigationItem
+                key={index}
+                clicked={() => filterProducts(category)}
+                linkType={linkType}
+                link={`/products/${category}`}>
+                <ListItem button>
+                  <ListItemText primary={content} className={classes.link}/>
+                  <Divider />
+                </ListItem>
+              </NavigationItem>
+            )
+          })}
+        </List>
+      </ul>
+    </nav>
+  )
+}
 
-];
-
-const sideNavigation = ({ filterProducts, children }) => (
-  <nav className="side-navigation">
-    <ul className="side-navigation-list">
-      {femaleCategories.map((femaleCategory, index) => {
-        const { category, linkType, content } = femaleCategory;
-
-        return (
-          <Card >
-            <br />
-            <NavigationItem
-              key={index}
-              clicked={() => filterProducts(category)}
-              linkType={linkType}
-              link={`/products/${category}`}>
-              <p style={textStyle}>
-                {content}
-              </p>
-            </NavigationItem>
-            <Divider />
-          </Card>
-        )
-      })}
-      {children}
-    </ul>
-  </nav>
-);
-
-sideNavigation.propTypes = {
+SideNavigation.propTypes = {
   filterProducts: PropTypes.func.isRequired
 };
 
-export default connect(null, { filterProducts })(sideNavigation);
+export default connect(null, { filterProducts })(SideNavigation);

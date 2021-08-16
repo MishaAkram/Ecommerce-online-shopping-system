@@ -46,16 +46,16 @@ const SideDrawer = ({ filterProducts, toggleSideDrawer }) => {
             const { category, linkType, content, link, authContent } = femaleCategory;
             return (
               (content || (isAuth && authContent)) && <>
-                <ListItem button>
-                  <NavigationItem
-                    key={index}
-                    clicked={() => filterProducts(category)}
-                    linkType={linkType}
-                    link={link ? `${link}` : `/products/${category}`}>
+                <NavigationItem
+                  key={index}
+                  clicked={() => filterProducts(category)}
+                  linkType={linkType}
+                  link={link ? `${link}` : `/products/${category}`}>
+                  <ListItem button>
                     <ListItemText primary={content || (isAuth && authContent)} />
-                  </NavigationItem>
-                </ListItem>
-                <Divider />
+                    <Divider />
+                  </ListItem>
+                </NavigationItem>
               </>
             )
           })}
