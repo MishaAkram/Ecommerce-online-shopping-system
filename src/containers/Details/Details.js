@@ -110,6 +110,7 @@ function Details(props) {
                 }
               </Button>
             </div>
+            <div style={{ margin: "180px" }} />
           </DetailItem>
         </Card>
       </ul>

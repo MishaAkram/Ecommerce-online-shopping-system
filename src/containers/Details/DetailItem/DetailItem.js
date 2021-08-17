@@ -22,7 +22,6 @@ function DetailItem({ children, data }) {
   const { title, subtitle, img, description, price, category, maincategory, code, previousPrice } = data ? data : detailProduct;
   return (
     <li className="detail-item">
-
       <h3 className="text-uppercase font-weight-bold" >{subtitle}</h3>
       <div className="detail-content ">
         <div className="detail-img-wrapper">
