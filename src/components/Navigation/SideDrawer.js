@@ -47,7 +47,7 @@ const SideDrawer = ({ filterProducts, toggleSideDrawer }) => {
             return (
               (content || (isAuth && authContent)) && <>
                 <NavigationItem
-                  key={index}
+                  key={category+index}
                   clicked={() => filterProducts(category)}
                   linkType={linkType}
                   link={link ? `${link}` : `/products/${category}`}>

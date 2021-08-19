@@ -8,7 +8,7 @@ import Footer from '../components/UI/Footer/Footer';
 const Layout = (props) => (
   <>
     <Toolbar />
-    <SideDrawer />
+    <SideDrawer key="sidedrawer"/>
     <main className="main-content">
       {props.children}
     </main>
