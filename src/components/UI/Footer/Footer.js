@@ -25,19 +25,19 @@ const footer = ({ filterProducts }) => (
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('kurtis')}
-                    to="/products/female" exact="true">Kurtis</Link>
+                    to="/products/kurtis" exact="true">Kurtis</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('un-stitched')}
-                    to="/products/female" exact="true">Unstitched</Link>
+                    to="/products/un-stitched" exact="true">Unstitched</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('stitched')}
-                    to="/products/female" exact="true">Stitched</Link>
+                    to="/products/stitched" exact="true">Stitched</Link>
                 </li>
 
               </ul>
@@ -55,25 +55,25 @@ const footer = ({ filterProducts }) => (
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('earings')}
-                    to="/products/accessories" exact="true">Earings</Link>
+                    to="/products/earings" exact="true">Earings</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('bracelets')}
-                    to="/products/accessories" exact="true">Bracelets</Link>
+                    to="/products/bracelets" exact="true">Bracelets</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('stoles')}
-                    to="/products/accessories" exact="true">Stoles</Link>
+                    to="/products/stoles" exact="true">Stoles</Link>
                 </li>
                 <li>
                   <Link
                     style={textStyle}
                     onClick={() => filterProducts('footware')}
-                    to="/products/accessories" exact="true">Footware</Link>
+                    to="/products/footware" exact="true">Footware</Link>
                 </li>
               </ul>
             </div>
